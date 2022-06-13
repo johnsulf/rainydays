@@ -1,8 +1,62 @@
 
 
-h1 {
-    text-transform: uppercase;
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 40px;
+    margin: auto;
+    color: #183540;
+    max-width: 1000px;
 }
+
+.navbar_title a {
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #183540;
+    letter-spacing: 10px;
+}
+
+.navbar_links {
+    flex: 4;
+    text-align: center;
+
+}
+
+.navbar_icons {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.fa-magnifying-glass {
+    padding-right: 30px;
+}
+
+.fa-cart-shopping {
+    padding-right: 5px;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #183540;
+    letter-spacing: 2px;
+    padding: 0px 0px 20px 20px;
+}
+
+nav a:hover {
+    text-decoration: underline 3px;
+
+}
+
+/* footer */
 
 footer {
     background-color: #183540;
