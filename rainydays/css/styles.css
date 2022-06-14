@@ -20,6 +20,10 @@ p {
     font-size: 1rem;
 }
 
+ul {
+    list-style: none;
+}
+
 /* header */
 
 header {
@@ -140,7 +144,33 @@ nav a:hover {
 /* footer */
 
 footer {
-    background-color: #183540;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    background-color: #183540;
     color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.footer_links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+}
+
+.icon {
+    padding: 15px 5px 0px 5px;
 }
