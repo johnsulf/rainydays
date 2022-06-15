@@ -18,6 +18,8 @@ h2 {
 
 p {
     font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 ul {
@@ -140,6 +142,20 @@ nav a:hover {
 
 /* main - popular products */
 
+.popular-products {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 0 60px 0;
+}
+
+.popular-products_product img {
+    background-color: #18354010;
+    width: 100px;
+    height: 100px;
+    padding: 40px;
+}
 
 /* footer */
 
