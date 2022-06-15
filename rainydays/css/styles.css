@@ -37,7 +37,6 @@ header {
     display: flex;
     align-items: center;
     font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: auto;
     color: #183540;
     max-width: 1000px;
 }
@@ -52,7 +51,7 @@ header {
 }
 
 .navbar_links {
-    flex: 2;
+    flex: 3;
     text-align: center;
 }
 
@@ -60,16 +59,9 @@ header {
     display: flex;
     align-items: center;
     flex: 1;
-    justify-content: end;
+    justify-content: space-evenly;
 }
 
-.fa-magnifying-glass {
-    padding-right: 30px;
-}
-
-.fa-cart-shopping {
-    padding-right: 5px;
-}
 
 nav a {
     text-transform: uppercase;
@@ -82,6 +74,10 @@ nav a {
 
 nav a:hover {
     text-decoration: underline 3px;
+}
+
+.fa-bars {
+    display: none;
 }
 
 /* main - welcome */
@@ -102,7 +98,7 @@ nav a:hover {
 }
 
 .welcome img {
-    max-width: 60vh;
+    width: 50vh;
 }
 
 .cta {
@@ -118,7 +114,6 @@ nav a:hover {
 
 .categories {
     display: flex;
-    justify-content: space-evenly;
     margin: 20px 0px;
     gap: 10px;
 }
@@ -127,7 +122,7 @@ nav a:hover {
 .category_men, .category_women {
     background-size: contain;
     background-repeat: no-repeat;
-    width: 500px;
+    width: 50%;
     height: 500px;
     color: #fff;
     text-transform: uppercase;
@@ -177,9 +172,6 @@ nav a:hover {
 /* footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     background-color: #183540;
     color: #fff;
@@ -207,4 +199,56 @@ footer p {
 
 .icon {
     padding: 15px 5px 15px 5px;
+}
+
+/* media queries */
+
+@media (max-width: 870px) {
+    .popular-products p, .popular-products {
+        font-size: 0.7rem;
+    }
+    
+    .navbar_title a {
+        flex: 2;
+        font-size: 2.5rem;
+    }
+    
+    .navbar_links {
+        display: none;
+    }
+    
+    .navbar_icons {
+        flex: 1;
+        justify-content: end;
+        gap: 10px;
+    }
+    
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    .fa-bars {
+        display: flex;
+        flex: 1;
+    }
+
+    .category_men, .category_women {
+        height: 300px;
+    }
+
+    .popular-products {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .popular-products_product img {
+        padding: 10px;
+        width: 70px;
+        height: 100px;
+    }
+
+    .more-arrow {
+        margin-top: 50px;
+    }
 }
