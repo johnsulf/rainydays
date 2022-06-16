@@ -2,22 +2,16 @@
 
 body {
     font-family: "Merriweather", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #212121;
-    padding: 20px 40px;
     max-width: 1000px;
     margin: auto;
-    
+    padding: 0 3rem;
 }
 
 h2 {
-    font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #183540;
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 2.2rem;
 }
 
 p {
-    font-size: 1rem;
     padding: 0;
     margin: 0;
 }
@@ -28,56 +22,78 @@ ul {
 
 a {
     text-decoration: none;
-    color: #212121;
+}
+
+.stacked {
+    display: grid;
+}
+
+.stacked > * {
+    grid-column: 1/2;
+    grid-row:  1/2;
+}
+
+/* shared styles */
+
+p, .nav__links a {
+    font-size: 1rem;
+}
+
+h2,
+header,
+.categories p {
+    font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2,
+.header,
+.title,
+.nav__links a,
+.nav__icons a,
+.nav__icons p,
+.stars,
+.popular-products__cards p,
+.more-arrow  {
+    color: #183540;
+}
+
+.title,
+.nav__links a,
+.cta,
+.categories__card p,
+footer a {
+    text-transform: uppercase;
 }
 
 /* header */
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
     align-items: center;
-    font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #183540;
-    max-width: 1000px;
 }
 
-.navbar_title a {
-    flex: 1;
-    text-transform: uppercase;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #183540;
+.title {
+    font-size: 2.5rem;
     letter-spacing: 10px;
 }
 
-.navbar_links {
-    flex: 3;
-    text-align: center;
-}
-
-.navbar_icons {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: space-evenly;
-}
-
-
-nav a {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #183540;
+.nav__links a {
     letter-spacing: 2px;
     padding: 0px 0px 20px 20px;
 }
 
 nav a:hover {
-    text-decoration: underline 3px;
+    text-decoration: underline 2px;
 }
 
-.fa-bars {
-    display: none;
+.nav__icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav__icons a {
+    padding: 0 10px 0 5px;
 }
 
 /* main - welcome */
@@ -85,11 +101,16 @@ nav a:hover {
 .welcome {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 0 2rem 0;
 }
 
 .welcome > * {
-    margin: 10px;
+    align-self: center;
+    margin: 0.5rem;
+}
+
+.welcome__img {
+    width: 69%;
 }
 
 .welcome p {
@@ -97,63 +118,54 @@ nav a:hover {
     text-align: center;
 }
 
-.welcome img {
-    width: 50vh;
-}
-
 .cta {
     background-color: #A23E48;
     color: #fff;
-    padding: 5px 70px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    text-decoration: none;
+    padding: 0.5rem 4rem;
 }
 
 /* main - categories */
 
 .categories {
-    display: flex;
-    margin: 20px 0px;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-content: center;
+    gap: 1rem;
 }
 
+.categories__card img {
+    width: 100%;
+}
 
-.category_men, .category_women {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 500px;
+.categories__card p {
     color: #fff;
-    text-transform: uppercase;
-    font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
-    padding: 0px 10px;
-    text-decoration: none;
-}
-
-.category_men {
-    background-image: url(../images/men.jpg);
-}
-
-.category_women {
-    background-image: url(../images/women.jpg);
+    padding:  0 0 0 0.5rem;
 }
 
 /* main - popular products */
 
-.popular-products {
-    display: flex;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 0 60px 0;
+.popular-products h2 {
+    text-align: center;
 }
 
-.popular-products_product img {
+.popular-products p {
+    font-size: 0.8rem;
+}
+
+.popular-products__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 6rem;
+} 
+
+.popular-products__cards img {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    padding: 1rem;
     background-color: #18354010;
-    width: 60%;
-    height: 100px;
-    padding: 40px;
 }
 
 .stars {
@@ -162,11 +174,7 @@ nav a:hover {
 }
 
 .stars p {
-    padding-left: 5px;
-}
-
-.more-arrow {
-    margin-top: 80px;
+    padding-left: 0.2rem;
 }
 
 /* footer */
@@ -180,7 +188,7 @@ footer {
     left: 0;
 }
 
-.footer_links {
+.footer__links {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -199,56 +207,4 @@ footer p {
 
 .icon {
     padding: 15px 5px 15px 5px;
-}
-
-/* media queries */
-
-@media (max-width: 870px) {
-    .popular-products p, .popular-products {
-        font-size: 0.7rem;
-    }
-    
-    .navbar_title a {
-        flex: 2;
-        font-size: 2.5rem;
-    }
-    
-    .navbar_links {
-        display: none;
-    }
-    
-    .navbar_icons {
-        flex: 1;
-        justify-content: end;
-        gap: 10px;
-    }
-    
-    nav a {
-        font-size: 1.2rem;
-    }
-
-    .fa-bars {
-        display: flex;
-        flex: 1;
-    }
-
-    .category_men, .category_women {
-        height: 300px;
-    }
-
-    .popular-products {
-        display: flex;
-        justify-content: space-between;
-        gap: 0;
-    }
-    
-    .popular-products_product img {
-        padding: 10px;
-        width: 70px;
-        height: 100px;
-    }
-
-    .more-arrow {
-        margin-top: 50px;
-    }
 }
