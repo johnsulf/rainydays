@@ -31,7 +31,7 @@ a {
 
 /* shared styles */
 
-p, .nav__links a {
+p, nav a {
     font-size: 1rem;
 }
 
@@ -44,7 +44,7 @@ header,
 h2,
 .header,
 .title,
-.nav__links a,
+nav a,
 .nav__icons a,
 .nav__icons p,
 .stars,
@@ -55,7 +55,7 @@ h2,
 }
 
 .title,
-.nav__links a,
+nav a,
 .cta,
 .categories__card p,
 footer a {
@@ -78,12 +78,31 @@ header {
     align-items: center;
 }
 
+/* hamburgerhack */
+
+.hamburger {
+    text-align: center;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger label:hover {
+    cursor: pointer;
+}
+
+#hamburger:checked ~ .title{
+    color: red;
+  }
+
+
 .title {
     font-size: 2.5rem;
     letter-spacing: 10px;
 }
 
-.nav__links a {
+nav a {
     letter-spacing: 2px;
     padding: 0 0 20px 20px;
     justify-content: center;
@@ -216,13 +235,13 @@ footer p {
         font-size: 2rem;
     }
 
-    .fa-bars {
+    .hamburger {
         padding: 0.2rem;
     }
 }
 
 @media (min-width: 800px) {
-    .fa-bars {
+    .hamburger {
         display: none;
     }
 
@@ -242,7 +261,7 @@ footer p {
         padding: 0 3rem
     }
 
-    .nav__links, .nav__icons p {
+    nav, .nav__icons p {
         display: none;
     }
 
@@ -253,14 +272,5 @@ footer p {
 
     .nav__icons {
         justify-content: center;
-    }
-
-    .fa-bars {
-        text-align: center;
-    }
-
-    .welcome p {
-        width: 190px;
-        text-align: center;
     }
 }
