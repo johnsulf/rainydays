@@ -50,8 +50,7 @@ nav a,
 .stars,
 .popular-products__cards p,
 .more-arrow,
-.fa-bars, 
-.mobile-nav-list  {
+.fa-bars {
     color: #183540;
 }
 
@@ -67,7 +66,8 @@ footer a,
 .cta, 
 .categories__card p,
 footer a,
-footer {
+footer, 
+.mobile-nav-list a {
     color: #fff;
 }
 
@@ -278,7 +278,7 @@ footer p {
 
     .mobile-nav-list {
         display: none;
-        background-color: #fff;
+        background-color: #183540;
         position: absolute;
         width: 10rem;
         padding-top: 1rem;
