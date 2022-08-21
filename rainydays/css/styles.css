@@ -50,7 +50,8 @@ nav a,
 .stars,
 .popular-products__cards p,
 .more-arrow,
-.fa-bars  {
+.fa-bars, 
+.mobile-nav-list  {
     color: #183540;
 }
 
@@ -58,7 +59,8 @@ nav a,
 nav a,
 .cta,
 .categories__card p,
-footer a {
+footer a,
+.mobile-nav-list {
     text-transform: uppercase;
 }
 
@@ -216,13 +218,13 @@ footer p {
         font-size: 2rem;
     }
 
-    .hamburger {
+    .mobile-nav {
         padding: 0.2rem;
     }
 }
 
 @media (min-width: 800px) {
-    .hamburger {
+    .mobile-nav {
         display: none;
     }
 
@@ -257,20 +259,32 @@ footer p {
 
     /* hamburgerhack */
 
-    .hamburger {
+    .mobile-nav {
         text-align: center;
     }
 
-    .hamburger input {
+    .mobile-nav input {
         display: none;
     }
 
-    .hamburger label:hover {
+    .mobile-nav label:hover {
         cursor: pointer;
     }
 
-    #hamburger:checked ~ .title{
-        color: red;
+    #hamburger:checked  ~ .mobile-nav-list {
+        display: flex;
+        
+    }
+
+    .mobile-nav-list {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        width: 10rem;
+        padding-top: 1rem;
+        margin-top: 10px;
+        flex-direction: column;
+        text-align: start;
     }
 
 }
