@@ -6,7 +6,7 @@ body {
     padding: 0 3rem;
 }
 
-h2 {
+h1, h2 {
     font-size: 2.2rem;
     text-align: center;
 }
@@ -29,19 +29,24 @@ a {
     grid-row:  1/2;
 }
 
+.small_text {
+
+    font-size: 0.69rem;
+}
+
 /* shared styles */
 
 p, nav a {
     font-size: 1rem;
 }
 
-h2,
+h1, h2,
 header,
-.categories p {
+.categories p, .product_info__price, .product_info__size__size {
     font-family: "Oswald", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h2,
+h1,h2,
 .header,
 .title,
 nav a,
@@ -50,7 +55,8 @@ nav a,
 .stars,
 .popular-products__cards p,
 .more-arrow,
-.fa-bars {
+.fa-bars, 
+.product_info__price, .product_info__size__size {
     color: #183540;
 }
 
@@ -128,8 +134,9 @@ nav a:hover {
 
 .cta {
     background-color: #A23E48;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 3rem;
     text-align: center;
+    display: block;
 }
 
 /* main - categories */
@@ -162,7 +169,7 @@ nav a:hover {
     margin-bottom: 6rem;
 } 
 
-.popular-products__card img, .product_detail__image  {
+.popular-products__card img, .product_info__image  {
     width: 100%;
     aspect-ratio: 1/1.1;
     padding: 1rem 0;
@@ -174,7 +181,6 @@ nav a:hover {
     align-items: center;
 }
 
-.pop
 
 .stars p {
     padding-left: 0.2rem;
@@ -209,15 +215,81 @@ footer p {
     padding: 1rem 0.25rem;
 }
 
+/* product info */
+
+.product_info__color {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+ .product_info__color span {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle1 {
+    background-color: #59565B;
+}
+
+.circle2 {
+    background-color: #183540;
+}
+
+.circle3 {
+    background-color: #326C85;
+}
+
+.circle4 {
+    background-color: #592227;
+}
+
+.circle5 {
+    background-color: #A23E48;
+}
+
+.product_info__size {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.product_info__size__size {
+    background-color: #18354010;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.product_info .stars  {
+    justify-content: end;
+}
+
+.product_info__name {
+    text-align: start;
+    margin: 0;
+}
+
+.product_info__price {
+    margin-bottom: 1rem;
+}
+
 /* media queries */
 
 @media (max-width: 500px) {
-    h2 {
-        font-size: 1.6rem;
+    h1, h2 {
+        font-size: 1.5rem;
     }
 
     .title {
         font-size: 2rem;
+        padding: 1rem 0;
     }
 
     .mobile-nav {
@@ -288,5 +360,4 @@ footer p {
         flex-direction: column;
         text-align: start;
     }
-
 }
