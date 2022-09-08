@@ -308,9 +308,9 @@ footer p {
 
 .page_selector {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 /* media queries */
