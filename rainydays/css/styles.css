@@ -321,9 +321,10 @@ footer p {
     color: #183540;
 }
 
-.checkout_summary {
+.checkout_summary, .checkout_review {
     background-color: #18354010;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .checkout_summary__top, .checkout_summary__middle, .checkout_summary__bottom {
     display: flex;
@@ -348,12 +349,32 @@ footer p {
 .test {
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
-.checkout_summary__bottom__text {
+.overline {
+    text-decoration: line-through;
+}
+
+.checkout_summary__bottom__text, .checkout_review__text {
     display: flex;
     justify-content: space-between;
 }
+
+input, select {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+label::after {
+    content: "";
+    display: block;
+  }
+
+  .form_header {
+    text-transform: uppercase;
+  }
 
 /* media queries */
 

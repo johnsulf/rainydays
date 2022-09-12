@@ -28,7 +28,7 @@
           <p class="small_text">Size: S</p>
           <p class="small_text">Color: Grey</p>
           <p class="small_text">1 x $99.99</p>
-          <p class="small_text total">Total: $99.99</span>
+          <p class="small_text total">Total: $99.99</p>
         </div>
       </div>
       <div class="checkout_summary__middle">
@@ -51,6 +51,60 @@
           <p class="small_text">TOTAL</p>
           <p class="small_text">$109.98</p>
         </div>
+    </section>
+    <section class="checkout_form">
+      <form action="submit.php" method="POST">
+        <h2 class="test form_header">1/4. delivery adress</h2>
+          <label for="firstname" class="small_text">First name*</label>
+          <input type="firstname" name="firstname">
+          <label for="lastname" class="small_text">Last name*</label>
+          <input type="lastname" name="lastname">
+          <label for="adress" class="small_text">Adress*</label>
+          <input type="adress" name="adress">
+          <label for="zip" class="small_text">ZIP code*</label>
+          <input type="zip" name="zip">
+          <label for="country" class="small_text">Country*</label>
+          <select name="country" id="country">
+            <option value="usa">USA</option>
+            <option value="norway">Norway</option>
+            <option value="sweden">Sweden</option>
+            <option value="denmark">Denmark</option>
+          </select>
+          <label for="tel" class="small_text">Phone number*</label>
+          <input type="tel" name="tel">
+        <h2 class="test form_header">2/4. shipping</h2>
+          <label for="eco" class="small_text">Economy Shipping (2-5 Days)</label>
+          <input type="radio" name="shipping" value="eco" id="eco">
+          <label for="fedex" class="small_text">FedEx 2-Day (2 Business Days)</label>
+          <input type="radio" name="shipping" value="fedex" id="fedex">
+        <h2 class="test form_header">3/4. payment</h2>
+          <label for="card_holder" class="small_text">Card holder</label>
+          <input type="name" name="card_holder">
+          <label for="card_number" class="small_text">Credit card number*</label>
+          <input type="number" name="card_number">
+          <label for="card_cvv" class="small_text">Secutiry code*</label>
+          <input type="number" name="card_cvv">
+          <label for="card_exp" class="small_text">Expiration date*</label>
+          <input type="month" name="card_exp">
+        <h2 class="test form_header">4/4. review & complete</h2>
+          <div class="checkout_review">
+            <h2 class="test">xtreme GTX</h2>
+            <p class="small_text">Size: S, Color: Grey</p>
+            <div class="checkout_review__text">
+              <p class="small_text">Product price:</p>
+              <p class="small_text">$99.99</p>
+            </div>
+            <div class="checkout_review__text">
+              <p class="small_text">Shipping:</p>
+              <p class="small_text overline">$9.99</p>
+            </div>
+            <div class="checkout_review__text total">
+              <p class="small_text">Total:</p>
+              <p class="small_text">$99.99</p>
+            </div>
+          </div>
+          <a href="index.html" class="cta">complete</a>
+      </form>
     </section>
   </main>
   <footer>
