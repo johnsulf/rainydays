@@ -288,6 +288,10 @@ footer p {
     border-top: solid 2px #18354010;
 }
 
+.last {
+    border-bottom: solid 2px #18354010;
+}
+
 .plus_sign {
     font-size: 1.5rem;
 }
