@@ -29,6 +29,12 @@ a {
     grid-row:  1/2;
 }
 
+.stacked h1 {
+    text-align: left;
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
 .small_text {
 
     font-size: 0.69rem;
@@ -64,6 +70,7 @@ nav a,
 nav a,
 .cta,
 .categories__card p,
+.categories__card h1,
 footer a,
 .mobile-nav-list {
     text-transform: uppercase;
@@ -71,6 +78,7 @@ footer a,
 
 .cta, 
 .categories__card p,
+.categories__card h1,
 footer a,
 footer, 
 .mobile-nav-list a {
@@ -155,6 +163,12 @@ nav a:hover {
 .categories__card p {
     font-size: 1.8rem;
     padding-left: 0.5rem;
+}
+
+.about_images {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
 }
 
 /* main - popular products */
@@ -330,12 +344,17 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .checkout_summary__top__image {
-    width: 50%;
+    width: 48%;
     aspect-ratio: 1/1;
+    
+}
+
+.center {
+    justify-content: center;
 }
 
 .total {
