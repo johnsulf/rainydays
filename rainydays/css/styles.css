@@ -331,8 +331,16 @@ footer p {
     color: #A23E48;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .blue_color {
     color: #183540;
+}
+
+.contact_info {
+    margin: 1rem 0;
 }
 
 .checkout_summary, .checkout_review {
@@ -350,7 +358,10 @@ footer p {
 .checkout_summary__top__image {
     width: 48%;
     aspect-ratio: 1/1;
-    
+}
+
+textarea {
+    width: 100%;
 }
 
 .center {

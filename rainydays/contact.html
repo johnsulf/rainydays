@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAINYDAYS | ABOUT</title>
+  <title>RAINYDAYS | CONTACT</title>
   <meta name="description" content="Discover and shop rain jackets designed for outdoor activities.">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/88c643a80f.js" crossorigin="anonymous"></script>
@@ -45,28 +45,29 @@
   <main>
     <section>
         <a href="about.html" class="categories__card stacked">
-          <img src="images/red_jacket2.jpeg" alt="Man looking at a rocky landscape.">
-          <h1>about</h1>
+          <img src="images/red_jacket.jpeg" alt="Man in red jacket in forest.">
+          <h1>contact</h1>
         </a>
     </section>
-    <section>
-      <h2>Our Mission</h2>
-      <p class="small_text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper facilisis tortor, vel pharetra metus imperdiet sit amet. Ut eu ex justo. Proin id hendrerit magna. Pellentesque turpis odio, pretium quis sapien hendrerit, molestie porta orci. Ut malesuada eleifend neque eu dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur tincidunt sem nec velit varius, eu posuere dolor eleifend. Phasellus placerat elit vitae dictum imperdiet. Aenean et mauris vehicula, accumsan turpis in, congue est. Aliquam lectus libero, ornare in orci eget, iaculis ornare erat. Mauris vel velit euismod, placerat sem eu, viverra leo. Proin vitae consectetur ante.
-      </p>
+    <section class="contact_info">
+      <p class="small_text">RAINYDAYS</p>
+      <p class="small_text">Box 469</p>
+      <p class="small_text">In The Middle Of Nowere 46</p>
+      <p class="small_text">91299 Lake Rain</p>
+      <p class="small_text">USA</p>
+      <p class="small_text">email: <span class="red_text underline">contact@rainydays.com</span></p>
+      <p class="small_text">phone: 09101010</p>
+      <p class="small_text">web: <span class="red_text underline">www.rainydays.com</span></p>
     </section>
-    <section class="checkout_summary__top">
-      <img src="images/red_jacket.jpeg" alt="Man in red jacket in forest." class="checkout_summary__top__image">
-      <img src="images/wet_leaf.jpeg" alt="Red wet leaf in water." class="checkout_summary__top__image">
-    </section>
-    <section>
-      <h2>Our Goal</h2>
-      <p class="small_text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper facilisis tortor, vel pharetra metus imperdiet sit amet. Ut eu ex justo. Proin id hendrerit magna. Pellentesque turpis odio, pretium quis sapien hendrerit, molestie porta orci. Ut malesuada eleifend neque eu dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-      </p>
-    </section>
-    <section class="checkout_summary__top center">
-      <img src="images/mountain.jpeg" alt="Man in red jacket in forest." class="checkout_summary__top__image">
+    <section class="checkout_form">
+      <form action="submit.php" method="POST">
+        <h2>Contact us</h2>
+          <label for="email" class="small_text">Email</label>
+          <input type="email" name="email">
+          <label for="message" class="small_text">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <a href="index.html" class="cta">complete</a>
+      </form>
     </section>
   </main>
   <footer>
