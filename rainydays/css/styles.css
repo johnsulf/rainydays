@@ -348,7 +348,13 @@ footer p {
     padding: 1rem;
     margin-bottom: 1rem;
 }
-.checkout_summary__top, .checkout_summary__middle, .checkout_summary__bottom {
+
+.checkout_summary__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkout_summary__middle, .checkout_summary__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,7 +362,7 @@ footer p {
 }
 
 .checkout_summary__top__image {
-    width: 48%;
+    width: 80%;
     aspect-ratio: 1/1;
 }
 
@@ -422,9 +428,9 @@ label::after {
     .title {
         font-size: 2rem;
         padding: 1rem 0;
-    }   
+    }
 
-    p {
+    p, label {
         font-size: 0.69rem;
     }
 
@@ -481,6 +487,16 @@ label::after {
 
     .stars-web {
         margin-bottom: 1rem;
+    }
+
+    .checkout_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .checkout_summary {
+        height: 40%;
+        margin: 0 1rem;
     }
 }
 
