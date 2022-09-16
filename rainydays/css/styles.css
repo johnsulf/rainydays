@@ -85,7 +85,6 @@ footer,
     color: #fff;
 }
 
-
 /* header */
 
 header {
@@ -432,6 +431,31 @@ label::after {
         max-width: 1000px;
         margin: auto;
     }
+
+    .welcome p {
+        width: 70%;
+    }
+
+    .popular-products {
+        display: flex;
+    }
+
+    .products {
+        flex: 4;
+    }
+
+    .filter_sort__web {
+        flex: 1;
+        margin-right: 1rem;
+    }
+
+    .filter_sort {
+        display: none;
+    }
+
+    .small_text {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 799px) {
@@ -455,6 +479,10 @@ label::after {
 
     .nav__icons {
         justify-content: center;
+    }
+
+    .filter_sort__web {
+        display: none;
     }
 
     /* hamburgerhack */
