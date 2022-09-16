@@ -59,7 +59,7 @@ nav a,
 .nav__icons a,
 .nav__icons p,
 .stars,
-.popular-products__cards p,
+.products__cards p,
 .more-arrow,
 .fa-bars, 
 .product_info__price, .product_info__size__size {
@@ -172,18 +172,18 @@ nav a:hover {
 
 /* main - popular products */
 
-.popular-products p {
+.products p {
     font-size: 0.8rem;
 }
 
-.popular-products__cards {
+.products__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     gap: 3rem;
     margin-bottom: 2rem;
 } 
 
-.popular-products__card img, .product_info__image  {
+.products__card img, .product_info__image  {
     width: 100%;
     aspect-ratio: 1/1.1;
     padding: 1rem 0;
@@ -436,7 +436,7 @@ label::after {
         width: 70%;
     }
 
-    .popular-products {
+    .products-container {
         display: flex;
     }
 
