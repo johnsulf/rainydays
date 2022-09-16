@@ -418,6 +418,26 @@ label::after {
     justify-content: space-between;
 }
 
+
+.about img {
+    height: 20rem;
+    object-fit: cover;
+}
+
+.about__images, .about__center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.about__images img, .about__center img {
+   width: 95%;
+   aspect-ratio: 1/1;
+   margin: 1rem 0;
+}
+
+
 /* media queries */
 
 @media (max-width: 500px) {
@@ -476,6 +496,10 @@ label::after {
         margin-bottom: 1rem;
     }
 
+    .about__images {
+        display: none;
+    }
+
     .product_info__price {
         font-size: 1.8rem;
         margin: 0;
@@ -530,6 +554,11 @@ label::after {
     .product_info__image {
         width: 100%;
         aspect-ratio: 1/1;
+    }
+
+
+    .about__center {
+        display: block;
     }
 
     /* hamburgerhack */
