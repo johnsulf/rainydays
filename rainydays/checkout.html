@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAINYDAYS | xtreme GTX</title>
+  <title>RAINYDAYS | CHECKOUT</title>
   <meta name="description" content="The xtreme GTX is a versatile jacket for suitable for all weathertypes.">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/88c643a80f.js" crossorigin="anonymous"></script>
@@ -13,10 +13,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <a href="jacket_info.html" class="blue_color mobile-nav">
+  <header class="checkout_header">
+    <a href="jacket_info.html" class="blue_color">
       <i class="fa-solid fa-chevron-left fa-xl"></i>
     </a>
+    <p>Continue shopping</p>
     <a href="index.html" class="title">rainydays</a>
   </header>
   <main>
@@ -25,9 +26,9 @@
         <img src="images/jacket5.png" alt="" class="checkout_summary__top__image">
         <div class="checkout_summary__top__text">
           <h1 class="test">xtreme GTX</h1>
-          <p class="small_text">Size: S</p>
-          <p class="small_text">Color: Grey</p>
-          <p class="small_text">1 x $99.99</p>
+          <p>Size: S</p>
+          <p>Color: Grey</p>
+          <p>1 x $99.99</p>
           <p class="small_text total">Total: $99.99</p>
         </div>
       </div>
@@ -36,71 +37,71 @@
         <i class="fa-solid fa-chevron-right fa-xl"></i>
       </div>
         <div class="checkout_summary__bottom__text">
-          <p class="small_text">Product price:</p>
-          <p class="small_text">$99.99</p>
+          <p>Product price:</p>
+          <p>$99.99</p>
         </div>
         <div class="checkout_summary__bottom__text">
-          <p class="small_text">Shipping:</p>
-          <p class="small_text">$9.99</p>
+          <p>Shipping:</p>
+          <p>$9.99</p>
         </div>
         <div class="checkout_summary__bottom__text">
-          <p class="small_text">Tax:</p>
-          <p class="small_text">25%</p>
+          <p>Tax:</p>
+          <p>25%</p>
         </div>
         <div class="checkout_summary__bottom__text total">
-          <p class="small_text">TOTAL</p>
-          <p class="small_text">$109.98</p>
+          <p>TOTAL</p>
+          <p>$109.98</p>
         </div>
     </section>
     <section class="checkout_form">
       <form action="submit.php" method="POST">
         <h2 class="test form_header">1/4. delivery adress</h2>
-          <label for="firstname" class="small_text">First name*</label>
+          <label for="firstname">First name*</label>
           <input type="firstname" name="firstname">
-          <label for="lastname" class="small_text">Last name*</label>
+          <label for="lastname">Last name*</label>
           <input type="lastname" name="lastname">
-          <label for="adress" class="small_text">Adress*</label>
+          <label for="adress">Adress*</label>
           <input type="adress" name="adress">
-          <label for="zip" class="small_text">ZIP code*</label>
+          <label for="zip">ZIP code*</label>
           <input type="zip" name="zip">
-          <label for="country" class="small_text">Country*</label>
+          <label for="country">Country*</label>
           <select name="country" id="country">
             <option value="usa">USA</option>
             <option value="norway">Norway</option>
             <option value="sweden">Sweden</option>
             <option value="denmark">Denmark</option>
           </select>
-          <label for="tel" class="small_text">Phone number*</label>
+          <label for="tel">Phone number*</label>
           <input type="tel" name="tel">
         <h2 class="test form_header">2/4. shipping</h2>
-          <label for="eco" class="small_text">Economy Shipping (2-5 Days)</label>
+          <label for="eco">Economy Shipping (2-5 Days)</label>
           <input type="radio" name="shipping" value="eco" id="eco">
-          <label for="fedex" class="small_text">FedEx 2-Day (2 Business Days)</label>
+          <label for="fedex">FedEx 2-Day (2 Business Days)</label>
           <input type="radio" name="shipping" value="fedex" id="fedex">
         <h2 class="test form_header">3/4. payment</h2>
-          <label for="card_holder" class="small_text">Card holder</label>
+          <label for="card_holder">Card holder</label>
           <input type="name" name="card_holder">
-          <label for="card_number" class="small_text">Credit card number*</label>
+          <label for="card_number">Credit card number*</label>
           <input type="number" name="card_number">
-          <label for="card_cvv" class="small_text">Secutiry code*</label>
+          <label for="card_cvv">Secutiry code*</label>
           <input type="number" name="card_cvv">
-          <label for="card_exp" class="small_text">Expiration date*</label>
+          <label for="card_exp">Expiration date*</label>
           <input type="month" name="card_exp">
         <h2 class="test form_header">4/4. review & complete</h2>
           <div class="checkout_review">
             <h2 class="test">xtreme GTX</h2>
-            <p class="small_text">Size: S, Color: Grey</p>
+            <p>Size: S, Color: Grey</p>
             <div class="checkout_review__text">
-              <p class="small_text">Product price:</p>
-              <p class="small_text">$99.99</p>
+              <p>Product price:</p>
+              <p>$99.99</p>
             </div>
             <div class="checkout_review__text">
-              <p class="small_text">Shipping:</p>
+              <p>Shipping:</p>
               <p class="small_text overline">$9.99</p>
             </div>
             <div class="checkout_review__text total">
-              <p class="small_text">Total:</p>
-              <p class="small_text">$99.99</p>
+              <p>Total:</p>
+              <p>$99.99</p>
             </div>
           </div>
           <a href="index.html" class="cta">complete</a>
