@@ -59,6 +59,7 @@ nav a,
 .nav__icons a,
 .nav__icons p,
 .stars,
+.stars-web,
 .products__cards p,
 .more-arrow,
 .fa-bars, 
@@ -91,6 +92,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .title {
@@ -108,7 +110,7 @@ nav a:hover {
     text-decoration: underline 2px;
 }
 
-.nav__icons {
+.nav__icons, .stars-web {
     display: flex;
     align-items: center;
 }
@@ -423,7 +425,7 @@ label::after {
 }
 
 @media (min-width: 800px) {
-    .mobile-nav {
+    .mobile-nav, .stars, .filter_sort {
         display: none;
     }
 
@@ -436,7 +438,7 @@ label::after {
         width: 70%;
     }
 
-    .products-container {
+    .products-container, .product_info {
         display: flex;
     }
 
@@ -444,17 +446,32 @@ label::after {
         flex: 4;
     }
 
-    .filter_sort__web {
+    .filter_sort__web, .product_info img, .product_info__info {
         flex: 1;
         margin-right: 1rem;
     }
 
-    .filter_sort {
-        display: none;
+    .product_info__image {
+        padding: 1rem;
+        aspect-ratio: 1/1;
+        margin-bottom: 1rem;
+    }
+
+    .product_info__price {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .product_info__size {
+    grid-template-columns: 1fr 1fr 1fr;
     }
 
     .small_text {
         font-size: 1rem;
+    }
+
+    .stars-web {
+        margin-bottom: 1rem;
     }
 }
 
@@ -483,6 +500,11 @@ label::after {
 
     .filter_sort__web {
         display: none;
+    }
+
+    .product_info__image {
+        width: 100%;
+        aspect-ratio: 1/1;
     }
 
     /* hamburgerhack */
