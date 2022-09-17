@@ -384,12 +384,6 @@ textarea {
     font-weight: 500;
 }
 
-.test {
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
 .overline {
     text-decoration: line-through;
 }
@@ -410,8 +404,16 @@ label::after {
     display: block;
   }
 
+  .summary_header {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
   .form_header {
     text-transform: uppercase;
+    margin: 1rem 0;
+    text-align: left;
   }
 
   .checkout_header {
@@ -437,6 +439,11 @@ label::after {
    width: 95%;
    aspect-ratio: 1/1;
    margin: 1rem 0;
+}
+
+.radio {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
 
 
