@@ -81,6 +81,76 @@ footer,
     color: #fff;
 }
 
+.plus_sign {
+    font-size: 1.5rem;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.red_color {
+    color: #A23E48;
+}
+
+.blue_color {
+    color: #183540;
+}
+
+.dark_background {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: line-through;
+}
+
+.center {
+    justify-content: center;
+}
+
+.total {
+    margin-top: 1rem;
+}
+
+.total p {
+    font-weight: 500;
+}
+
+/* products */
+
+.products p {
+    font-size: 0.8rem;
+}
+
+.products__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+} 
+
+.products__card img, .product_info__image  {
+    width: 100%;
+    aspect-ratio: 1/1.1;
+    padding: 1rem 0;
+    background-color: #18354010;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+
+.stars p {
+    padding-left: 0.2rem;
+}
+
 /* header */
 
 header {
@@ -123,89 +193,6 @@ nav a:hover {
     margin: 0 1rem;
 }
 
-/* main - welcome */
-
-.welcome {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-}
-
-.welcome > * {
-    align-self: center;
-    margin: 0.5rem;
-}
-
-.welcome__img {
-    width: 80%;
-}
-
-.welcome p {
-    width: 190px;
-    text-align: center;
-}
-
-.cta {
-    background-color: #A23E48;
-    padding: 0.5rem 3rem;
-    text-align: center;
-    display: block;
-    margin: 1rem 0;
-}
-
-/* main - categories */
-
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1rem;
-}
-
-.categories__card img {
-    width: 100%;
-}
-
-.categories__card p {
-    font-size: 1.8rem;
-    padding-left: 0.5rem;
-}
-
-.about_images {
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
-}
-
-/* main - popular products */
-
-.products p {
-    font-size: 0.8rem;
-}
-
-.products__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-    gap: 3rem;
-    margin-bottom: 2rem;
-} 
-
-.products__card img, .product_info__image  {
-    width: 100%;
-    aspect-ratio: 1/1.1;
-    padding: 1rem 0;
-    background-color: #18354010;
-}
-
-.stars {
-    display: flex;
-    align-items: center;
-}
-
-
-.stars p {
-    padding-left: 0.2rem;
-}
-
 /* footer */
 
 footer {
@@ -236,6 +223,56 @@ footer p {
     padding: 1rem 0.25rem;
 }
 
+/* index */
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.welcome > * {
+    align-self: center;
+    margin: 0.5rem;
+}
+
+.welcome__img {
+    width: 80%;
+}
+
+.welcome p {
+    width: 190px;
+    text-align: center;
+}
+
+.cta {
+    background-color: #A23E48;
+    padding: 0.5rem 3rem;
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.categories__card img {
+    width: 100%;
+}
+
+.categories__card p {
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+}
+
+.about_images {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
 
 /* product info */
 
@@ -253,23 +290,23 @@ footer p {
   display: inline-block;
 }
 
-.circle1 {
+#grey-bg {
     background-color: #59565B;
 }
 
-.circle2 {
+#darkblue-bg {
     background-color: #183540;
 }
 
-.circle3 {
+#lightblue-bg {
     background-color: #326C85;
 }
 
-.circle4 {
+#darkred-bg {
     background-color: #592227;
 }
 
-.circle5 {
+#lightred-bg {
     background-color: #A23E48;
 }
 
@@ -313,18 +350,12 @@ footer p {
     border-bottom: solid 2px #18354010;
 }
 
-.plus_sign {
-    font-size: 1.5rem;
-}
+/* jackets | mens, womens, all */
 
 .filter_sort {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-}
-
-.center_text {
-    text-align: center;
 }
 
 .page_selector {
@@ -334,17 +365,7 @@ footer p {
     margin: 2rem 0;
 }
 
-.red_text {
-    color: #A23E48;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.blue_color {
-    color: #183540;
-}
+/* checkout */
 
 .contact_info, .checkout_form {
     margin: 1rem 1rem;
@@ -373,29 +394,31 @@ footer p {
     aspect-ratio: 1/1;
 }
 
-textarea {
-    width: 100%;
-}
-
-.center {
-    justify-content: center;
-}
-
-.total {
-    margin-top: 1rem;
-}
-
-.total p {
-    font-weight: 500;
-}
-
-.overline {
-    text-decoration: line-through;
-}
-
 .checkout_summary__bottom__text, .checkout_review__text {
     display: flex;
     justify-content: space-between;
+}
+
+.summary_header {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.checkout_header {
+display: grid;
+grid-template-columns: 1fr 8fr 1fr;
+justify-content: space-between;
+}
+
+.checkout_form a {
+    display: flex;
+    justify-content: center;
+}
+
+ /* forms */
+textarea {
+    width: 100%;
 }
 
 input, select {
@@ -409,24 +432,18 @@ label::after {
     display: block;
   }
 
-  .summary_header {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
-
-  .form_header {
-    text-transform: uppercase;
-    margin: 1rem 0;
-    text-align: left;
-  }
-
-  .checkout_header {
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    justify-content: space-between;
+.form_header {
+text-transform: uppercase;
+margin: 1rem 0;
+text-align: left;
 }
 
+.radio {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+ /* about */
 
 .about img {
     height: 20rem;
@@ -446,10 +463,7 @@ label::after {
    margin: 1rem 0;
 }
 
-.radio {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-}
+/* success */
 
 .success_container {
     background-color: #18354010;
@@ -462,21 +476,13 @@ label::after {
     transform: translate(0, 20%);
 }
 
-.dark_background {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.checkout_form a {
-    display: flex;
-    justify-content: center;
-}
-
 .success_container a {
     width: 150px;
 }
 
 /* media queries */
 
+/* mobile */
 @media (max-width: 500px) {
     h1, h2 {
         font-size: 1.5rem;
@@ -500,6 +506,7 @@ label::after {
     }
 }
 
+/* larger screens */
 @media (min-width: 800px) {
     .mobile-nav, .filter_sort,.product_info .stars  {
         display: none;
@@ -563,7 +570,6 @@ label::after {
 }
 
 @media (max-width: 799px) {
-
     body {
         padding: 0;
     }
