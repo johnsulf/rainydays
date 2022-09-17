@@ -460,10 +460,8 @@ label::after {
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
+    transform: translate(0, 20%);
 }
-
-
-
 
 /* media queries */
 
