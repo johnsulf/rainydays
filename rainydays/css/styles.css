@@ -151,7 +151,6 @@ nav a:hover {
     text-align: center;
     display: block;
     margin: 1rem 0;
-    width: 150px;
 }
 
 /* main - categories */
@@ -465,6 +464,15 @@ label::after {
 
 .dark_background {
     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.checkout_form a {
+    display: flex;
+    justify-content: center;
+}
+
+.success_container a {
+    width: 150px;
 }
 
 /* media queries */
