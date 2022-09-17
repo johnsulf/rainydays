@@ -463,6 +463,10 @@ label::after {
     transform: translate(0, 20%);
 }
 
+.dark_background {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 /* media queries */
 
 @media (max-width: 500px) {
@@ -541,15 +545,12 @@ label::after {
     .checkout_container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 20%;
     }
 
     .checkout_summary {
         height: 40%;
         margin: 0 1rem;
-    }
-
-    .checkout_container  {
-        margin-bottom: 20%;
     }
 }
 
