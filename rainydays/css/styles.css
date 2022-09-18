@@ -315,7 +315,6 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
     gap: 0.5rem;
     margin-bottom: 1rem;
-
 }
 
 .product_info__size__size {
@@ -348,6 +347,11 @@ footer p {
 
 .last {
     border-bottom: solid 2px #18354010;
+}
+
+.product_info__color span:hover, .product_info__size__size:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px #183540 inset;
 }
 
 /* jackets | mens, womens, all */
