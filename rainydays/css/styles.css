@@ -212,6 +212,7 @@ footer {
 
 footer a {
     text-decoration: underline;
+    height: 48px;
 }
 
 footer p {
