@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="images/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
+    rel="stylesheet">
+  <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3457715, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 </head>
+
 <body>
   <header>
     <section class="mobile-nav">
       <input type="checkbox" name="hamburger" id="hamburger">
-      <label for="hamburger"><i class="fa-solid fa-bars fa-xl" ></i></label>
+      <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
       <nav class="mobile-nav-list">
         <a href="index.html">home</a>
         <a href="mens_jackets.html">men</a>
@@ -46,8 +60,19 @@
   </header>
   <main>
     <section class="product_info">
-        <img src="images/jacket5.png" alt="xtreme GTX is a grey rain jacket." class="product_info__image">
-        <div class="stars">
+      <img src="images/jacket5.png" alt="xtreme GTX is a grey rain jacket." class="product_info__image">
+      <div class="stars">
+        <i class="fa-solid fa-star fa-xs"></i>
+        <i class="fa-solid fa-star fa-xs"></i>
+        <i class="fa-solid fa-star fa-xs"></i>
+        <i class="fa-solid fa-star fa-xs"></i>
+        <i class="fa-solid fa-star-half-stroke fa-xs"></i>
+        <p>4,6</p>
+      </div>
+      <div class="product_info__info">
+        <h1 class="product_info__name">xtreme GTX</h1>
+        <p class="product_info__price">99,99 $</p>
+        <div class="stars-web">
           <i class="fa-solid fa-star fa-xs"></i>
           <i class="fa-solid fa-star fa-xs"></i>
           <i class="fa-solid fa-star fa-xs"></i>
@@ -55,36 +80,25 @@
           <i class="fa-solid fa-star-half-stroke fa-xs"></i>
           <p>4,6</p>
         </div>
-        <div class="product_info__info">
-          <h1 class="product_info__name">xtreme GTX</h1>
-          <p class="product_info__price">99,99 $</p> 
-          <div class="stars-web">
-            <i class="fa-solid fa-star fa-xs"></i>
-            <i class="fa-solid fa-star fa-xs"></i>
-            <i class="fa-solid fa-star fa-xs"></i>
-            <i class="fa-solid fa-star fa-xs"></i>
-            <i class="fa-solid fa-star-half-stroke fa-xs"></i>
-            <p>4,6</p>
-          </div>
-          <p>Pick color</p>
-          <div class="product_info__color">
-              <span id="grey-bg"></span>
-              <span id="darkblue-bg"></span>
-              <span id="lightblue-bg"></span>
-              <span id="darkred-bg"></span>
-              <span id="lightred-bg"></span>
-          </div>
-          <p>Choose size</p>
-          <div class="product_info__size">
-              <p class="product_info__size__size">xs</p>
-              <p class="product_info__size__size">s</p>
-              <p class="product_info__size__size">m</p>
-              <p class="product_info__size__size">l</p>
-              <p class="product_info__size__size">xl</p>
-              <p class="product_info__size__size">xxl</p>
-          </div>
-          <a href="checkout.html" class="cta">add to cart</a>
+        <p>Pick color</p>
+        <div class="product_info__color">
+          <span id="grey-bg"></span>
+          <span id="darkblue-bg"></span>
+          <span id="lightblue-bg"></span>
+          <span id="darkred-bg"></span>
+          <span id="lightred-bg"></span>
         </div>
+        <p>Choose size</p>
+        <div class="product_info__size">
+          <p class="product_info__size__size">xs</p>
+          <p class="product_info__size__size">s</p>
+          <p class="product_info__size__size">m</p>
+          <p class="product_info__size__size">l</p>
+          <p class="product_info__size__size">xl</p>
+          <p class="product_info__size__size">xxl</p>
+        </div>
+        <a href="checkout.html" class="cta">add to cart</a>
+      </div>
     </section>
     <section>
       <div class="product_info__expansionTile">
@@ -185,12 +199,12 @@
     </section>
   </main>
   <footer>
-      <div class="footer__links">
-        <a href="index.html">account</a>
-        <a href="about.html">about</a>
-        <a href="index.html">terms of use</a>
-        <a href="contact.html">contact</a>
-      </div>
+    <div class="footer__links">
+      <a href="index.html">account</a>
+      <a href="about.html">about</a>
+      <a href="index.html">terms of use</a>
+      <a href="contact.html">contact</a>
+    </div>
     <div class="footer__icons">
       <i class="fa-brands fa-facebook icon"></i>
       <i class="fa-brands fa-twitter icon"></i>
@@ -200,4 +214,5 @@
     <p>&copy;RAINYDAYS</p>
   </footer>
 </body>
+
 </html>

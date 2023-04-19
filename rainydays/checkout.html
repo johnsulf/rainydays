@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAINYDAYS | CHECKOUT</title>
-  <meta name="description" content="See the summary of your order, fill in your contact details and complete your order.">
+  <meta name="description"
+    content="See the summary of your order, fill in your contact details and complete your order.">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/88c643a80f.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="images/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
+    rel="stylesheet">
+  <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3457715, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 </head>
+
 <body>
   <header class="checkout_header">
     <a href="jacket_info.html" class="blue_color">
@@ -37,72 +52,73 @@
         <input type="text" name="discount" id="discount" placeholder="Discount code">
         <i class="fa-solid fa-chevron-right fa-xl"></i>
       </div>
-        <div class="checkout_summary__bottom__text">
-          <p>Product price:</p>
-          <p>$99.99</p>
-        </div>
-        <div class="checkout_summary__bottom__text">
-          <p>Shipping:</p>
-          <p>$9.99</p>
-        </div>
-        <div class="checkout_summary__bottom__text">
-          <p>Tax:</p>
-          <p>25%</p>
-        </div>
-        <div class="checkout_summary__bottom__text total">
-          <p>TOTAL</p>
-          <p>$109.98</p>
-        </div>
+      <div class="checkout_summary__bottom__text">
+        <p>Product price:</p>
+        <p>$99.99</p>
+      </div>
+      <div class="checkout_summary__bottom__text">
+        <p>Shipping:</p>
+        <p>$9.99</p>
+      </div>
+      <div class="checkout_summary__bottom__text">
+        <p>Tax:</p>
+        <p>25%</p>
+      </div>
+      <div class="checkout_summary__bottom__text total">
+        <p>TOTAL</p>
+        <p>$109.98</p>
+      </div>
     </section>
     <section class="checkout_form">
       <form action="submit.php" method="POST">
         <h2 class="form_header">1/4. delivery adress</h2>
-          <label for="firstname">First name*</label> <input type="firstname" name="firstname" id="firstname">
-          <label for="lastname">Last name*</label> <input type="lastname" name="lastname" id="lastname">
-          <label for="adress">Adress*</label> <input type="adress" name="adress" id="adress">
-          <label for="zip">ZIP code*</label> <input type="zip" name="zip" id="zip">
-          <label for="country">Country*</label>
-          <select name="country" id="country">
-            <option value="usa" id="usa">USA</option>
-            <option value="norway" id="norway">Norway</option>
-            <option value="sweden" id="sweden">Sweden</option>
-            <option value="denmark" id="denmark">Denmark</option>
-          </select>
-          <label for="tel">Phone number*</label> <input type="tel" name="tel" id="country">
+        <label for="firstname">First name*</label> <input type="firstname" name="firstname" id="firstname">
+        <label for="lastname">Last name*</label> <input type="lastname" name="lastname" id="lastname">
+        <label for="adress">Adress*</label> <input type="adress" name="adress" id="adress">
+        <label for="zip">ZIP code*</label> <input type="zip" name="zip" id="zip">
+        <label for="country">Country*</label>
+        <select name="country" id="country">
+          <option value="usa" id="usa">USA</option>
+          <option value="norway" id="norway">Norway</option>
+          <option value="sweden" id="sweden">Sweden</option>
+          <option value="denmark" id="denmark">Denmark</option>
+        </select>
+        <label for="tel">Phone number*</label> <input type="tel" name="tel" id="country">
         <h2 class="form_header">2/4. shipping</h2>
-          <div class="radio">
-            <input type="radio" name="shipping" value="eco" id="eco">
-            <label for="eco">Economy Shipping (2-5 Days)</label>
-          </div>
-          <div class="radio">
-            <input type="radio" name="shipping" value="fedex" id="fedex">
-            <label for="fedex">FedEx 2-Day (2 Business Days)</label>
-          </div>
+        <div class="radio">
+          <input type="radio" name="shipping" value="eco" id="eco">
+          <label for="eco">Economy Shipping (2-5 Days)</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="shipping" value="fedex" id="fedex">
+          <label for="fedex">FedEx 2-Day (2 Business Days)</label>
+        </div>
         <h2 class="form_header">3/4. payment</h2>
-          <label for="card_holder">Card holder</label> <input type="name" name="card_holder" id="card_holder">
-          <label for="card_number">Credit card number*</label> <input type="number" name="card_number" id="card_number">
-          <label for="card_cvv">Secutiry code*</label> <input type="number" name="card_cvv" id="card_cvv">
-          <label for="card_exp">Expiration date*</label> <input type="month" name="card_exp" id="card_exp">
+        <label for="card_holder">Card holder</label> <input type="name" name="card_holder" id="card_holder">
+        <label for="card_number">Credit card number*</label> <input type="number" name="card_number" id="card_number">
+        <label for="card_cvv">Secutiry code*</label> <input type="number" name="card_cvv" id="card_cvv">
+        <label for="card_exp">Expiration date*</label> <input type="month" name="card_exp" id="card_exp">
         <h2 class="form_header">4/4. review & complete</h2>
-          <div class="checkout_review">
-            <h2 class="summary_header">xtreme GTX</h2>
-            <p>Size: S, Color: Grey</p>
-            <div class="checkout_review__text">
-              <p>Product price:</p>
-              <p>$99.99</p>
-            </div>
-            <div class="checkout_review__text">
-              <p>Shipping:</p>
-              <p class="small_text overline">$9.99</p>
-            </div>
-            <div class="checkout_review__text total">
-              <p>Total:</p>
-              <p>$99.99</p>
-            </div>
+        <div class="checkout_review">
+          <h2 class="summary_header">xtreme GTX</h2>
+          <p>Size: S, Color: Grey</p>
+          <div class="checkout_review__text">
+            <p>Product price:</p>
+            <p>$99.99</p>
           </div>
-          <a href="success.html" class="cta">complete</a>
+          <div class="checkout_review__text">
+            <p>Shipping:</p>
+            <p class="small_text overline">$9.99</p>
+          </div>
+          <div class="checkout_review__text total">
+            <p>Total:</p>
+            <p>$99.99</p>
+          </div>
+        </div>
+        <a href="success.html" class="cta">complete</a>
       </form>
     </section>
   </main>
 </body>
+
 </html>
