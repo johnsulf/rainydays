@@ -1,13 +1,15 @@
 export const jackets = [
     {
         img: "jacket1.png",
+        alt: "XM xtreme GTX. Black rain jacket.",
         manufactor: "XM",
         model: "xtreme GTX",
         price: 99.99,
-        stars: 4.6,
+        stars: 3.8,
     }, 
     {
         img: "jacket2.png",
+        alt: "Scott Terrain Dryo. Grey rain jacket.",
         manufactor: "Scott",
         model: "Terrain Dryo",
         price: 199.99,
@@ -15,6 +17,7 @@ export const jackets = [
     },
     {
         img: "jacket3.png",
+        alt: "Craft Rainy Run. Red rain jacket.",
         manufactor: "Craft",
         model: "Rainy Run",
         price: 199.99,
@@ -22,6 +25,7 @@ export const jackets = [
     },
     {
         img: "jacket4.png",
+        alt: "Stormberg Boat. Grey and orange rain jacket.",
         manufactor: "Stormberg",
         model: "Boat",
         price: 99.99,
@@ -29,6 +33,7 @@ export const jackets = [
     },
     {
         img: "jacket5.png",
+        alt: "Rainydays Rain. Grey rain jacket.",
         manufactor: "RAINYDAYS",
         model: "Rain",
         price: 199.99,
