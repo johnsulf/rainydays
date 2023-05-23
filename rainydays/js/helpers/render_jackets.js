@@ -1,26 +1,24 @@
-import { jackets } from "./jackets.js";
-
-// console.log(jackets);
+import { jackets } from "../models/jackets_list.js";
 
 const jacketsContainer = document.querySelector(".products__cards");
 
 let html = "";
 
-function renderJackets() {
-    for (let i = 0; i < jackets.length; i++) {
+export function renderJackets(numberOfJackets) {
+    for (let i = 0; i < numberOfJackets; i++) {
         const j = jackets[i];
 
         let starsHtml = "";
         let fullStars = Math.floor(j.stars); // Full stars
         let halfStar = j.stars % 1 >= 0.1 ? true : false;
 
-              for (let i = 0; i < fullStars; i++) {
+            for (let i = 0; i < fullStars; i++) {
             starsHtml += `<i class="fa-solid fa-star fa-xs"></i>`;
-        }
+            }
 
-        if (halfStar) {
+            if (halfStar) {
             starsHtml += `<i class="fa-solid fa-star-half-stroke fa-xs"></i>`;
-        }
+            }
 
         html += `<a href="jacket_detail.html" class="products__card">
                     <img src="images/${j.img}" alt="${j.alt}">
@@ -35,5 +33,3 @@ function renderJackets() {
     }
     jacketsContainer.innerHTML = html;
 }
-
-renderJackets();
