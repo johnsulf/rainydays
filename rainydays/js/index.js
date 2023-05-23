@@ -22,7 +22,7 @@ function renderJackets() {
             starsHtml += `<i class="fa-solid fa-star-half-stroke fa-xs"></i>`;
         }
 
-        html += `<a href="jacket_info.html" class="products__card">
+        html += `<a href="jacket_detail.html" class="products__card">
                     <img src="images/${j.img}" alt="${j.alt}">
                     <p>${j.manufactor}</p>
                     <p>${j.model}</p>
