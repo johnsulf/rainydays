@@ -7,8 +7,13 @@ export const jackets = [
         price: 99.99,
         stars: 3.8,
         color: ["grey"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["male", "female", "unisex"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     }, 
     {
         img: "jacket2.png",
@@ -18,8 +23,13 @@ export const jackets = [
         price: 199.99,
         stars: 5,
         color: ["grey"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["male", "female", "unisex"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     },
     {
         img: "jacket3.png",
@@ -29,8 +39,13 @@ export const jackets = [
         price: 199.99,
         stars: 4.4,
         color: ["red"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["male", "female", "unisex"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     },
     {
         img: "jacket4.png",
@@ -40,8 +55,13 @@ export const jackets = [
         price: 99.99,
         stars: 4.5,
         color: ["grey", "orange"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["male", "female", "unisex"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     },
     {
         img: "jacket5.png",
@@ -51,8 +71,13 @@ export const jackets = [
         price: 199.99,
         stars: 4.5,
         color: ["grey"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["male", "female", "unisex"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     },
     {
         img: "jacket6.png",
@@ -62,7 +87,12 @@ export const jackets = [
         price: 129.99,
         stars: 4.8,
         color: ["pink"],
-        sizes: ["XS","S", "M", "L", "XL", "XXL"],
         gender: ["female"],
+        availableSizes: [
+            { size: "S", quantity: 3 },
+            { size: "M", quantity: 3 },
+            { size: "L", quantity: 3 },
+            { size: "XL", quantity: 3 }
+        ],
     },
 ]
