@@ -34,16 +34,16 @@
       <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
       <nav class="mobile-nav-list">
         <a href="/" class="underline">home</a>
-        <a href="pages/jackets.html">men</a>
-        <a href="pages/jackets.html">women</a>
+        <a href="pages/jackets.html?gender=male">men</a>
+        <a href="pages/jackets.html?gender=female">women</a>
         <a href="pages/about.html">about</a>
         <a href="pages/contact.html">contact</a>
       </nav>
     </section>
     <a href="/" class="title">rainydays</a>
     <nav class="nav__links">
-      <a href="pages/jackets.html">men</a>
-      <a href="pages/jackets.html">women</a>
+      <a href="pages/jackets.html?gender=male">men</a>
+      <a href="pages/jackets.html?gender=female">women</a>
       <a href="pages/about.html">about</a>
       <a href="pages/contact.html">contact</a>
     </nav>
@@ -65,11 +65,11 @@
       <a href="pages/jackets.html" class="cta">shop now</a>
     </section>
     <section class="categories">
-      <a href="pages/jackets.html" class="categories__card stacked">
+      <a href="pages/jackets.html?gender=male" class="categories__card stacked">
         <img src="assets/images/men.jpg" alt="Man in rainjacket.">
         <p>men</p>
       </a>
-      <a href="pages/jackets.html" class="categories__card stacked">
+      <a href="pages/jackets.html?gender=female" class="categories__card stacked">
         <img src="assets/images/women.jpg" alt="Woman in rainjacket.">
         <p>women</p>
       </a>
@@ -96,7 +96,7 @@
     </div>
     <p>&copy;RAINYDAYS</p>
   </footer>
-  <script type="module" src="js/jackets/home_jackets.js"></script>
+  <script type="module" src="js/helpers/render_jackets.js"></script>
 
 </body>
 

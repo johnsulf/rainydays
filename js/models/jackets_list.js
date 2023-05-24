@@ -8,7 +8,7 @@ export const jackets = [
         price: 99.99,
         stars: 3.8,
         color: ["grey"],
-        gender: ["male", "female", "unisex"],
+        gender: ["male"],
         availableSizes: [
             { size: "S", quantity: 3 },
             { size: "M", quantity: 3 },
@@ -59,7 +59,7 @@ export const jackets = [
         price: 99.99,
         stars: 4.5,
         color: ["grey", "orange"],
-        gender: ["male", "female", "unisex"],
+        gender: ["male"],
         availableSizes: [
             { size: "S", quantity: 3 },
             { size: "M", quantity: 3 },
@@ -74,7 +74,7 @@ export const jackets = [
         manufactor: "RAINYDAYS",
         model: "Rain",
         price: 199.99,
-        stars: 4.5,
+        stars: 2.9,
         color: ["grey"],
         gender: ["male", "female", "unisex"],
         availableSizes: [
