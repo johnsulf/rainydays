@@ -12,16 +12,16 @@ export function renderJackets(numberOfJackets) {
         let fullStars = Math.floor(j.stars); // Full stars
         let halfStar = j.stars % 1 >= 0.1 ? true : false;
 
-            for (let i = 0; i < fullStars; i++) {
+        for (let i = 0; i < fullStars; i++) {
             starsHtml += `<i class="fa-solid fa-star fa-xs"></i>`;
-            }
+        }
 
-            if (halfStar) {
+        if (halfStar) {
             starsHtml += `<i class="fa-solid fa-star-half-stroke fa-xs"></i>`;
-            }
+        }
 
-        html += `<a href="jacket_detail.html" class="products__card">
-                    <img src="images/${j.img}" alt="${j.alt}">
+        html += `<a href="pages/jacket_detail.html" class="products__card">
+                    <img src="/assets/images/${j.img}" alt="${j.alt}">
                     <p>${j.manufactor}</p>
                     <p>${j.model}</p>
                     <p>${j.price} $</p>
