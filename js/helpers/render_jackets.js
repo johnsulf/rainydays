@@ -4,9 +4,13 @@ const jacketsContainer = document.querySelector(".products__cards");
 
 let html = "";
 
-export function renderJackets(numberOfJackets) {
+export function renderJackets(numberOfJackets, sex) {
     for (let i = 0; i < numberOfJackets; i++) {
         const j = jackets[i];
+
+        if (j.gender.includes(sex)) {
+            continue;
+        }
 
         let starsHtml = "";
         let fullStars = Math.floor(j.stars); // Full stars
@@ -18,6 +22,10 @@ export function renderJackets(numberOfJackets) {
 
         if (halfStar) {
             starsHtml += `<i class="fa-solid fa-star-half-stroke fa-xs"></i>`;
+        }
+
+        if (j.stars < 4) {
+            starsHtml += `<i class="fa-regular fa-star fa-xs"></i>`;
         }
 
         html += `<a href="pages/jacket_detail.html" class="products__card">
