@@ -9,14 +9,48 @@ const categoryHeader = document.querySelector(".category-header");
 
 const gender = params.get('gender');
 
-const filteredJackets = gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
+let filteredJackets = gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
 
 let html = "";
 
-function renderJackets() {
+function getCheckedOptions(optionType) {
+    const checkedOptions = [];
+    const allOptions = document.querySelectorAll(`input[name="${optionType}"]:checked`);
 
-    for (let i = 0; i < filteredJackets.length; i++) {
-        const j = filteredJackets[i];
+    allOptions.forEach(option => {
+        checkedOptions.push(option.value);
+    });
+
+    return checkedOptions;
+}
+
+function getReviewFilter() {
+    const reviewFilter = document.getElementById('review-filter');
+    return parseFloat(reviewFilter.value);
+}
+
+function renderJackets() {
+    html = "";  // reset html content
+
+    const colorFilters = getCheckedOptions('color');
+    const sizeFilters = getCheckedOptions('size');
+    const reviewFilter = getReviewFilter();
+
+    // Always start with the full set of jackets
+    let jacketsToRender = [...jackets];
+
+    if (colorFilters.length > 0) {
+        jacketsToRender = jacketsToRender.filter(jacket => colorFilters.some(color => jacket.color.includes(color)));
+    }
+
+    if (sizeFilters.length > 0) {
+        jacketsToRender = jacketsToRender.filter(jacket => jacket.availableSizes.some(sizeObj => sizeFilters.includes(sizeObj.size)));
+    }
+
+    jacketsToRender = jacketsToRender.filter(jacket => jacket.stars >= reviewFilter);
+
+    for (let i = 0; i < jacketsToRender.length; i++) {
+        const j = jacketsToRender[i];
 
         let starsHtml = getStars(j.stars);
 
@@ -32,6 +66,10 @@ function renderJackets() {
                 </a>`;
     }
     jacketsContainer.innerHTML = html;
+
+    document.querySelectorAll('.filter input[type="checkbox"], .filter select').forEach(el => {
+        el.addEventListener('change', renderJackets);
+    });
 }
 
 renderJackets();

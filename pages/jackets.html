@@ -65,49 +65,47 @@
         adventure you go on.</p>
     </section>
     <section class="products-container">
-      <div class="filter_sort">
-        <p>Filter</p>
-        <p>Sort</p>
-      </div>
-      <div class="filter_sort__web">
-        <p class="bold-text">Filter by
-        <p>
-        <div class="product_info__expansionTile">
+      <div class="filter">
+        <div>
           <p>Color</p>
-          <p class="plus_sign">+</p>
+          <div>
+            <input type="checkbox" id="grey" name="color" value="grey">
+            <label for="grey">Grey</label>
+            <input type="checkbox" id="orange" name="color" value="orange">
+            <label for="orange">Orange</label>
+          </div>
         </div>
-        <div class="product_info__expansionTile">
+
+        <div>
           <p>Size</p>
-          <p class="plus_sign">+</p>
+          <div>
+            <input type="checkbox" id="S" name="size" value="S">
+            <label for="S">Small</label>
+            <input type="checkbox" id="M" name="size" value="M">
+            <label for="M">Medium</label>
+          </div>
         </div>
-        <div class="product_info__expansionTile">
-          <p>Material</p>
-          <p class="plus_sign">+</p>
-        </div>
-        <div class="product_info__expansionTile">
-          <p>Activity</p>
-          <p class="plus_sign">+</p>
-        </div>
-        <div class="product_info__expansionTile last">
+
+        <div>
           <p>Reviews</p>
-          <p class="plus_sign">+</p>
+          <div>
+            <select id="review-filter">
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </div>
       </div>
+
       <div class="products">
         <div class="products__cards">
-
+          /* render jackets with JS */
         </div>
         <section class="page_nav">
-          <p class="small_text center_text">Jacket <span class="red_color">1-10</span> of <span
-              class="red_color">32</span></p>
-          <div class="page_selector">
-            <i class="fa-solid fa-chevron-left fa-xl red_color"></i>
-            <p class="small_text red_color">1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <i class="fa-solid fa-chevron-right fa-xl red_color"></i>
-          </div>
+          <h3>Show more TODO</h3>
         </section>
       </div>
     </section>
