@@ -28,3 +28,39 @@ export function returnGenderString(gender) {
             return 'All Jackets';
     }
 }
+
+export function getCheckedOptions(optionType) {
+    const checkedOptions = [];
+    const allOptions = document.querySelectorAll(`input[name="${optionType}"]:checked`);
+    allOptions.forEach(option => {
+        checkedOptions.push(option.value);
+    });
+    return checkedOptions;
+}
+
+export function filterByOptions(jackets, optionType, optionList) {
+    return jackets.filter(jacket => optionList.some(option => jacket[optionType].includes(option)));
+}
+
+export function filterBySize(jackets, sizeFilters) {
+    return jackets.filter(jacket => jacket.availableSizes.some(sizeObj => sizeFilters.includes(sizeObj.size)));
+}
+
+export function filterByRating(jackets, ratingFilter) {
+    return jackets.filter(jacket => jacket.stars >= ratingFilter);
+}
+
+export function renderJacketCard(jacket) {
+    let starsHtml = getStars(jacket.stars);
+
+    return `<a href="../../pages/jacket_detail.html" class="products__card">
+                <img src="/assets/images/${jacket.img}" alt="${jacket.alt}">
+                <p>${jacket.manufactor}</p>
+                <p>${jacket.model}</p>
+                <p>${jacket.price} $</p>
+                <div class="stars">
+                ${starsHtml}
+                <p>${jacket.stars}</p>
+                </div>
+            </a>`;
+}
