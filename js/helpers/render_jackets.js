@@ -36,8 +36,8 @@ function renderJackets() {
     const sizeFilters = getCheckedOptions('size');
     const reviewFilter = getReviewFilter();
 
-    // Always start with the full set of jackets
-    let jacketsToRender = [...jackets];
+    // Always start with the filtered set of jackets based on gender
+    let jacketsToRender = [...filteredJackets];
 
     if (colorFilters.length > 0) {
         jacketsToRender = jacketsToRender.filter(jacket => colorFilters.some(color => jacket.color.includes(color)));
@@ -66,11 +66,12 @@ function renderJackets() {
                 </a>`;
     }
     jacketsContainer.innerHTML = html;
-
-    document.querySelectorAll('.filter input[type="checkbox"], .filter select').forEach(el => {
-        el.addEventListener('change', renderJackets);
-    });
 }
+
+document.querySelectorAll('.filter input[type="checkbox"], .filter select').forEach(el => {
+    el.removeEventListener('change', renderJackets); // remove any previous listeners
+    el.addEventListener('change', renderJackets);
+});
 
 renderJackets();
 

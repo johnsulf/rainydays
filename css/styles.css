@@ -144,15 +144,13 @@ label {
     margin-bottom: 2rem;
 }
 
-.products__card img,
-.product_info__image {
-    height: 70%;
-    max-width: 150px;
+.products__card img {
+    height: 150px;
+    width: 150px;
     object-fit: contain;
-    padding: 0.25rem;
     background-color: #18354010;
+    padding: 0.25rem;
 }
-
 
 .stars {
     display: flex;
