@@ -782,6 +782,7 @@ hr {
 .search {
     position: absolute;
     right: var(--size-50);
+    top: 4rem;
     display: none;
 }
 

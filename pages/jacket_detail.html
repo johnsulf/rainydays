@@ -28,77 +28,11 @@
 </head>
 
 <body>
-  <header>
-    <section class="mobile-nav">
-      <input type="checkbox" name="hamburger" id="hamburger">
-      <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
-      <nav class="mobile-nav-list">
-        <a href="/index.html">home</a>
-        <a href="/pages/jackets.html?gender=male">men</a>
-        <a href="/pages/jackets.html?gender=female">women</a>
-        <a href="/pages/about.html">about</a>
-        <a href="/pages/contact.html">contact</a>
-      </nav>
-    </section>
-    <a href="/index.html" class="title">rainydays</a>
-    </div>
-    <nav class="nav__links">
-      <a href="/pages/jackets.html?gender=male">men</a>
-      <a href="/pages/jackets.html?gender=female">women</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/pages/contact.html">contact</a>
-    </nav>
-    <div class="nav__icons">
-      <a href="">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
-      <a href="/pages/checkout.html">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <p>$ 0.00</p>
-    </div>
+  <header id="header">
   </header>
   <main>
-    <section class="product_info">
-      <img src="assets/images/jacket5.png" alt="xtreme GTX is a grey rain jacket." class="product_info__image">
-      <div class="stars">
-        <i class="fa-solid fa-star fa-xs"></i>
-        <i class="fa-solid fa-star fa-xs"></i>
-        <i class="fa-solid fa-star fa-xs"></i>
-        <i class="fa-solid fa-star fa-xs"></i>
-        <i class="fa-solid fa-star-half-stroke fa-xs"></i>
-        <p>4,6</p>
-      </div>
-      <div class="product_info__info">
-        <h1 class="product_info__name">xtreme GTX</h1>
-        <p class="product_info__price">99,99 $</p>
-        <div class="stars-web">
-          <i class="fa-solid fa-star fa-xs"></i>
-          <i class="fa-solid fa-star fa-xs"></i>
-          <i class="fa-solid fa-star fa-xs"></i>
-          <i class="fa-solid fa-star fa-xs"></i>
-          <i class="fa-solid fa-star-half-stroke fa-xs"></i>
-          <p>4,6</p>
-        </div>
-        <p>Pick color</p>
-        <div class="product_info__color">
-          <span id="grey-bg"></span>
-          <span id="darkblue-bg"></span>
-          <span id="lightblue-bg"></span>
-          <span id="darkred-bg"></span>
-          <span id="lightred-bg"></span>
-        </div>
-        <p>Choose size</p>
-        <div class="product_info__size">
-          <p class="product_info__size__size">xs</p>
-          <p class="product_info__size__size">s</p>
-          <p class="product_info__size__size">m</p>
-          <p class="product_info__size__size">l</p>
-          <p class="product_info__size__size">xl</p>
-          <p class="product_info__size__size">xxl</p>
-        </div>
-        <a href="/pages/checkout.html" class="cta">add to cart</a>
-      </div>
+    <section class="jacket-detail">
+
     </section>
     <section>
       <div class="product_info__expansionTile">
@@ -213,6 +147,9 @@
     </div>
     <p>&copy;RAINYDAYS</p>
   </footer>
+
+  <script type="module" src="/js/components/header.js"></script>
+  <script type="module" src="/js/jacket_detail.js"></script>
 </body>
 
 </html>

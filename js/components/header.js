@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let html = '';
 
         results.forEach(result => {
-            html += `<a class="search-result" href="/pages/jacket_detail.html">      
+            html += `<a class="search-result" href="/pages/jacket_detail.html?id=${result.id}">      
                         <img class="search-result_img" src="/assets/images/${result.img}">
                         <div class="search-result_info">
                             <p class="search-result_title">${result.model}</p>
