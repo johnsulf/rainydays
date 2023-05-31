@@ -12,8 +12,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="assets/icons/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
-    rel="stylesheet">
   <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -28,74 +26,79 @@
 </head>
 
 <body>
+
   <header>
-    <section class="mobile-nav">
-      <input type="checkbox" name="hamburger" id="hamburger">
-      <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
-      <nav class="mobile-nav-list">
-        <a href="/" class="underline">home</a>
-        <a href="pages/jackets.html?gender=male">men</a>
-        <a href="pages/jackets.html?gender=female">women</a>
-        <a href="pages/about.html">about</a>
-        <a href="pages/contact.html">contact</a>
-      </nav>
-    </section>
-    <a href="/" class="title">rainydays</a>
-    <nav class="nav__links">
+
+    <a href="/" class="tt-uppercase">rainydays</a>
+
+    <nav class="nav-links tt-capitalize">
       <a href="pages/jackets.html?gender=male">men</a>
       <a href="pages/jackets.html?gender=female">women</a>
       <a href="pages/about.html">about</a>
       <a href="pages/contact.html">contact</a>
     </nav>
-    <div class="nav__icons">
+
+    <div class="nav-icons">
+
       <a href="/">
         <i class="fa-solid fa-magnifying-glass"></i>
       </a>
+
       <a href="pages/checkout.html">
         <i class="fa-solid fa-cart-shopping"></i>
       </a>
-      <p>$ 0.00</p>
+
     </div>
+
   </header>
+
   <main>
-    <section class="welcome">
-      <img src="assets/images/logo.jpg" alt="Rainydays logo. Drawing og mountains." class="welcome__img">
-      <h1>Pushing the Comfort Zone</h1>
+
+    <section class="showcase margin-block-100">
+      <img src="assets/images/logo.jpg" alt="Rainydays logo. Drawing og mountains.">
+      <h1 class="fs-primary-h">Pushing the comfort zone</h2>
       <p>Rain jackets designed for outdoor activities</p>
       <a href="pages/jackets.html" class="cta">shop now</a>
     </section>
+
     <section class="categories">
-      <a href="pages/jackets.html?gender=male" class="categories__card stacked">
+      <a href="pages/jackets.html?gender=male" class="stacked">
         <img src="assets/images/men.jpg" alt="Man in rainjacket.">
-        <p>men</p>
+        <p class="text-white fs-secondary-h tt-uppercase">men</p>
       </a>
-      <a href="pages/jackets.html?gender=female" class="categories__card stacked">
+      <a href="pages/jackets.html?gender=female" class="stacked">
         <img src="assets/images/women.jpg" alt="Woman in rainjacket.">
-        <p>women</p>
+        <p class="text-white fs-secondary-h tt-uppercase">women</p>
       </a>
     </section>
+
     <section class="products">
       <h2>Popular products</h2>
-      <div class="products__cards">
-
-      </div>
+      <div class="products_cards"></div>
     </section>
+
   </main>
+
   <footer>
-    <div class="footer__links">
-      <a href="index.html">account</a>
-      <a href="about.html">about</a>
-      <a href="index.html">terms of use</a>
-      <a href="contact.html">contact</a>
+
+    <div class="footer-links tt-uppercase">
+      <a href="index.html" class="text-white">account</a>
+      <a href="about.html" class="text-white">about</a>
+      <a href="index.html" class="text-white">terms of use</a>
+      <a href="contact.html" class="text-white">contact</a>
     </div>
-    <div class="footer__icons">
+
+    <div class="footer-icons">
       <i class="fa-brands fa-facebook icon"></i>
       <i class="fa-brands fa-twitter icon"></i>
       <i class="fa-brands fa-google icon"></i>
       <i class="fa-brands fa-instagram icon"></i>
     </div>
+
     <p>&copy;RAINYDAYS</p>
+
   </footer>
+
   <script type="module" src="js/helpers/render_jackets.js"></script>
 
 </body>

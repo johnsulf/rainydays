@@ -1,0 +1,60 @@
+/* VARIABLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
+
+:root {
+    /* colors */
+        --clr-primary: #183540;
+        --clr-secondary: #A23E48;
+        --clr-tertiary: #326C85;
+    
+        --clr-primary10: #18354010;
+        --clr-secondary10: #A23E4810;
+        --clr-tertiary10: #326C8510;
+    
+        --clr-background: #FAFAFA;
+        --clr-white: #fff;
+        --clr-black: #000;
+        --clr-black50: #00000050;
+        --clr-black10: #00000010;
+    
+    /* typography */
+        --ff-primary: 'Merriweather', sans-serif;
+        --ff-secondary: 'Oswald', serif;
+    
+        --fw-semi-bold: 600;
+        --fw-bold: 700;
+    
+        --fs-300: 1rem;
+        --fs-400: 1.25rem;
+        --fs-500: 1.5rem;
+        --fs-600: 2rem;
+        --fs-700: 2.25rem;
+        --fs-800: 3rem;
+        --fs-900: 4.5rem;
+
+        --tt-upper: uppercase;
+        --tt-cap: capitalize;
+    
+    /* sizes */
+        --size-50: .5rem;
+        --size-100: 1rem;
+        --size-150: 1.5rem;
+        --size-200: 2rem;
+        --size-250: 2.5rem;
+        --size-300: 3rem;
+        --size-350: 3.5rem;
+        --size-400: 4rem;
+        --size-1200: 12rem;
+
+    /* box-shadow */
+        --box-shadow: 2px 1px 8px 0 var(--clr-black50);
+        --box-shadow-hover: 5px 5px 5px var(--clr-black50);
+
+    /* duration */
+        --dur-default: 0.3s;
+
+    /* border-radius */
+        --radius-default: 4px;
+        --radius-circle: 50%;
+    }
