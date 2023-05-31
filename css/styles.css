@@ -729,6 +729,11 @@ img {
     width: 100%;
 }
 
+hr {
+    color: var(--clr-primary10);
+    width: 100%;
+}
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -751,6 +756,13 @@ img {
     z-index: 1;
 }
 
+.nav-icons {
+    display: flex;
+    align-items: baseline;
+    gap: var(--size-100);
+    cursor: pointer;
+}
+
 .menu-close {
     display: none;
     position: absolute;
@@ -765,6 +777,53 @@ img {
 
 .nav-links.show .menu-close {
     display: block;
+}
+
+.search {
+    position: absolute;
+    right: var(--size-50);
+    display: none;
+}
+
+.search input {
+    height: 2rem;
+    width: 20rem;
+    border-radius: var(--radius-default);
+    border: 1px solid var(--clr-primary);
+    margin-top: 2px;
+    padding-inline: var(--size-100);
+}
+
+.search.show {
+    display: block;
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
+}
+
+.search-result {
+    display: flex;
+    gap: var(--size-50);
+    align-items: center;
+    height: var(--size-300);
+}
+
+.search-result_img {
+    width: var(--size-150);
+    height: var(--size-150);
+    background-color: var(--clr-primary10);
+    margin-left: var(--size-50);
+    padding: var(--size-50);
+    border-radius: var(--radius-circle);
+}
+
+.search-result_title {
+    font-size: var(--size-100);
+    color: var(--clr-primary);
+}
+
+.search-result_subtitle {
+    font-size: 0.75rem;
+    color: var(--clr-tertiary);
 }
 
 .cta {
@@ -784,6 +843,10 @@ img {
     text-align: center;
 }
 
+.showcase p {
+    width: 60%;
+}
+
 .stacked {
     display: grid;
     margin-block: var(--size-50);
@@ -797,7 +860,8 @@ img {
 }
 
 .products {
-    overflow: scroll;
+    overflow-x: scroll;
+    scrollbar-width: thin;
 }
 
 .products_cards {
@@ -836,8 +900,13 @@ img {
     display: none;
     position: absolute;
     box-shadow: var(--box-shadow);
+    animation-duration: 0.5s;
 }
 
+.filter-active {
+    color: var(--clr-tertiary);
+    /* Replace 'red' with any color you want */
+}
 
 .footer-links {
     display: flex;
@@ -849,6 +918,38 @@ img {
     display: flex;
     justify-content: center;
     gap: var(--size-50);
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+.slideOutUp {
+    animation-name: slideOutUp;
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 700px) {

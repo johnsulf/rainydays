@@ -41,7 +41,10 @@
       <div class="filter">
 
         <div class="filter-item" id="color-filter-item">
-          <p class="fw-bold">Color &darr;</p>
+          <p class="fw-bold">
+            <span class="filter-label">Color</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
           <div class="filter-options" id="color-filter-options">
             <div class="filter-options_option">
               <input type="checkbox" id="grey" name="color" value="grey">
@@ -63,7 +66,10 @@
         </div>
 
         <div class="filter-item" id="size-filter-item">
-          <p class="fw-bold">Size &darr;</p>
+          <p class="fw-bold">
+            <span class="filter-label">Size</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
           <div class="filter-options" id="size-filter-options">
             <div class="filter-options_option">
               <input type="checkbox" id="S" name="size" value="S">
@@ -85,15 +91,31 @@
         </div>
 
         <div class="filter-item" id="review-filter-item">
-          <p class="fw-bold">Reviews &darr;</p>
+          <p class="fw-bold">
+            <span class="filter-label">Review</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
           <div class="filter-options" id="review-filter-options">
-            <select id="review-filter">
-              <option value="1">1+</option>
-              <option value="2">2+</option>
-              <option value="3">3+</option>
-              <option value="4">4+</option>
-              <option value="5">5</option>
-            </select>
+            <div class="filter-options_option">
+              <input type="radio" id="1-star" name="reviews" value="1">
+              <label for="1-star">1+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="2-star" name="reviews" value="2">
+              <label for="2-star">2+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="3-star" name="reviews" value="3">
+              <label for="3-star">3+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="4-star" name="reviews" value="4">
+              <label for="4-star">4+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="5-star" name="reviews" value="5">
+              <label for="5-star">5</label>
+            </div>
           </div>
 
         </div>
@@ -108,13 +130,13 @@
     </section>
   </main>
   <footer>
-    <div class="footer__links">
-      <a href="/index.html">account</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/index.html">terms of use</a>
-      <a href="/pages/contact.html">contact</a>
+    <div class="footer-links tt-uppercase">
+      <a href="/index.html" class="text-white">account</a>
+      <a href="/pages/about.html" class="text-white">about</a>
+      <a href="/index.html" class="text-white">terms of use</a>
+      <a href="/pages/contact.html" class="text-white">contact</a>
     </div>
-    <div class="footer__icons">
+    <div class="footer-icons">
       <i class="fa-brands fa-facebook icon"></i>
       <i class="fa-brands fa-twitter icon"></i>
       <i class="fa-brands fa-google icon"></i>
