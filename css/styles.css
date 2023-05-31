@@ -693,6 +693,8 @@ body, html {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: var(--size-50) var(--size-100);
 }
 
 main {
@@ -721,6 +723,44 @@ a {
 
 img {
     max-width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-100);
+    width: 100%;
+    transform: translateX(-100%);
+    z-index: 1; /* Add this line to ensure the nav menu overlays other content */
+}
+
+.menu-close {
+    display: none;
+    position: absolute;
+    left: var(--size-100);
+    top: var(--size-100);
+    z-index: 2;  /* Add this line to ensure the close button overlays the nav menu */
+}
+
+.nav-links.show {
+    transform: translateX(0);
+}
+
+.nav-links.show .menu-close {
+    display: block;
 }
 
 .cta {
@@ -760,4 +800,27 @@ img {
     display: flex;
     justify-content: center;
     gap: var(--size-50);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-links {
+        position: relative;
+        height: auto;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+        transform: translateX(0);
+    }
 }
