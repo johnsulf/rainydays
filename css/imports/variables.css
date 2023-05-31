@@ -52,7 +52,7 @@
         --box-shadow-hover: 5px 5px 5px var(--clr-black50);
 
     /* duration */
-        --dur-default: 0.3s;
+        --dur-default: 0.5s;
 
     /* border-radius */
         --radius-default: 4px;

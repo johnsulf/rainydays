@@ -13,8 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="/assets/icons/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
-    rel="stylesheet">
   <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -29,34 +27,7 @@
 </head>
 
 <body>
-  <header>
-    <section class="mobile-nav">
-      <input type="checkbox" name="hamburger" id="hamburger">
-      <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
-      <nav class="mobile-nav-list">
-        <a href="/index.html">home</a>
-        <a href="/pages/jackets.html?gender=male">men</a>
-        <a href="/pages/jackets.html?gender=female">women</a>
-        <a href="/pages/about.html">about</a>
-        <a href="/pages/contact.html">contact</a>
-      </nav>
-    </section>
-    <a href="/index.html" class="title">rainydays</a>
-    <nav class="nav__links">
-      <a href="/pages/jackets.html?gender=male">men</a>
-      <a href="/pages/jackets.html?gender=female">women</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/pages/contact.html">contact</a>
-    </nav>
-    <div class="nav__icons">
-      <a href="">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
-      <a href="/pages/checkout.html">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <p>$ 0.00</p>
-    </div>
+  <header id="header">
   </header>
   <main>
     <section class="welcome">
@@ -134,6 +105,7 @@
     <p>&copy;RAINYDAYS</p>
   </footer>
   <script type="module" src="/js/helpers/render_jackets.js"></script>
+  <script type="module" src="/js/components/header.js"></script>
 </body>
 
 </html>

@@ -731,7 +731,7 @@ img {
 }
 
 .nav-links {
-    transition: all 0.5s ease;
+    transition: all var(--dur-default) ease;
     position: fixed;
     right: 0;
     top: 0;
