@@ -30,44 +30,63 @@
   <header id="header">
   </header>
   <main>
-    <section class="welcome">
-      <h1 class="category-header"></h1>
-      <p>Beeing suitable for a range of different weather conditions, RAINYDAYS got you covered. Be comfortable whatever
-        adventure you go on.</p>
+    <section class="showcase">
+      <h1 class="category-header text-primary-h"></h1>
+      <p>
+        Beeing suitable for a range of different weather conditions, RAINYDAYS got you covered. Be comfortable whatever
+        adventure you go on.
+      </p>
     </section>
     <section class="products-container">
       <div class="filter">
-        <div>
-          <p>Color</p>
-          <div>
-            <input type="checkbox" id="grey" name="color" value="grey">
-            <label for="grey">Grey</label>
-            <input type="checkbox" id="orange" name="color" value="orange">
-            <label for="orange">Orange</label>
-            <input type="checkbox" id="red" name="color" value="red">
-            <label for="red">Red</label>
-            <input type="checkbox" id="pink" name="color" value="pink">
-            <label for="pink">Pink</label>
+
+        <div class="filter-item" id="color-filter-item">
+          <p class="fw-bold">Color &darr;</p>
+          <div class="filter-options" id="color-filter-options">
+            <div class="filter-options_option">
+              <input type="checkbox" id="grey" name="color" value="grey">
+              <label for="grey">Grey</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="orange" name="color" value="orange">
+              <label for="orange">Orange</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="red" name="color" value="red">
+              <label for="red">Red</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="pink" name="color" value="pink">
+              <label for="pink">Pink</label>
+            </div>
           </div>
         </div>
 
-        <div>
-          <p>Size</p>
-          <div>
-            <input type="checkbox" id="S" name="size" value="S">
-            <label for="S">Small</label>
-            <input type="checkbox" id="M" name="size" value="M">
-            <label for="M">Medium</label>
-            <input type="checkbox" id="L" name="size" value="L">
-            <label for="L">Large</label>
-            <input type="checkbox" id="XL" name="size" value="XL">
-            <label for="XL">X-Large</label>
+        <div class="filter-item" id="size-filter-item">
+          <p class="fw-bold">Size &darr;</p>
+          <div class="filter-options" id="size-filter-options">
+            <div class="filter-options_option">
+              <input type="checkbox" id="S" name="size" value="S">
+              <label for="S">Small</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="M" name="size" value="M">
+              <label for="M">Medium</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="L" name="size" value="L">
+              <label for="L">Large</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="XL" name="size" value="XL">
+              <label for="XL">X-Large</label>
+            </div>
           </div>
         </div>
 
-        <div>
-          <p>Reviews</p>
-          <div>
+        <div class="filter-item" id="review-filter-item">
+          <p class="fw-bold">Reviews &darr;</p>
+          <div class="filter-options" id="review-filter-options">
             <select id="review-filter">
               <option value="1">1+</option>
               <option value="2">2+</option>
@@ -76,17 +95,16 @@
               <option value="5">5</option>
             </select>
           </div>
+
         </div>
+
       </div>
 
-      <div class="products">
-        <div class="products__cards">
+      <section class="products">
+        <div class="products_cards">
           /* render jackets with JS */
         </div>
-        <section class="page_nav">
-          <h3>Show more TODO</h3>
-        </section>
-      </div>
+      </section>
     </section>
   </main>
   <footer>
@@ -106,6 +124,7 @@
   </footer>
   <script type="module" src="/js/helpers/render_jackets.js"></script>
   <script type="module" src="/js/components/header.js"></script>
+  <script type="module" src="/js/helpers/show_filters.js"></script>
 </body>
 
 </html>

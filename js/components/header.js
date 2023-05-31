@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="#" class="menu-close">
                 <i class="fa fa-times"></i>
             </a>
-            <a href="pages/jackets.html?gender=male">men</a>
-            <a href="pages/jackets.html?gender=female">women</a>
-            <a href="pages/about.html">about</a>
-            <a href="pages/contact.html">contact</a>
+            <a href="/pages/jackets.html?gender=male">men</a>
+            <a href="/pages/jackets.html?gender=female">women</a>
+            <a href="/pages/about.html">about</a>
+            <a href="/pages/contact.html">contact</a>
         </nav>
         <div class="nav-icons">
             <a href="/">

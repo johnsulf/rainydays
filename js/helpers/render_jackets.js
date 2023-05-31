@@ -1,6 +1,5 @@
 import { jackets } from "../models/jackets_list.js";
 import {
-    getStars,
     returnGenderString,
     getCheckedOptions,
     filterByOptions,
@@ -11,7 +10,7 @@ import {
 
 const params = new URLSearchParams(window.location.search);
 
-const jacketsContainer = document.querySelector(".products__cards");
+const jacketsContainer = document.querySelector(".products_cards");
 const categoryHeader = document.querySelector(".category-header");
 
 const gender = params.get('gender');
@@ -22,17 +21,16 @@ let html = "";
 
 function getReviewFilter() {
     const reviewFilter = document.getElementById('review-filter');
-    return parseFloat(reviewFilter.value);
+    return reviewFilter ? parseFloat(reviewFilter.value) : 0;
 }
 
 function renderJackets() {
-    html = "";  // reset html content
+    html = "";
 
     const colorFilters = getCheckedOptions('color');
     const sizeFilters = getCheckedOptions('size');
     const reviewFilter = getReviewFilter();
 
-    // Always start with the full set of jackets
     let jacketsToRender = [...filteredJackets];
 
     if (colorFilters.length > 0) {
@@ -50,11 +48,17 @@ function renderJackets() {
     }
     jacketsContainer.innerHTML = html;
 
-    document.querySelectorAll('.filter input[type="checkbox"], .filter select').forEach(el => {
-        el.addEventListener('change', renderJackets);
-    });
+    const filterElements = document.querySelectorAll('.filter input[type="checkbox"], .filter select');
+    if (filterElements.length > 0) {
+        filterElements.forEach(el => {
+            el.addEventListener('change', renderJackets);
+        });
+    }
 }
 
 renderJackets();
 
-categoryHeader.innerHTML = returnGenderString(gender);
+if (categoryHeader) {
+    categoryHeader.innerHTML = returnGenderString(gender);
+}
+

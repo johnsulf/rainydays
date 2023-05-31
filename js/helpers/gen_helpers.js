@@ -53,14 +53,15 @@ export function filterByRating(jackets, ratingFilter) {
 export function renderJacketCard(jacket) {
     let starsHtml = getStars(jacket.stars);
 
-    return `<a href="../../pages/jacket_detail.html" class="products__card">
+    return `<a href="../../pages/jacket_detail.html" class="products_cards__card">
                 <img src="/assets/images/${jacket.img}" alt="${jacket.alt}">
                 <p>${jacket.manufactor}</p>
                 <p>${jacket.model}</p>
                 <p>${jacket.price} $</p>
-                <div class="stars">
-                ${starsHtml}
+                <div class="products_cards__card__stars">
+                <p>${starsHtml}</p>
                 <p>${jacket.stars}</p>
                 </div>
             </a>`;
 }
+
