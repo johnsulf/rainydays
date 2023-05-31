@@ -1,6 +1,6 @@
 export const jackets = [
     {
-        id: 1,
+        id: 0,
         img: "jacket1.png",
         alt: "XM xtreme GTX. Black rain jacket.",
         manufactor: "XM",
@@ -17,7 +17,7 @@ export const jackets = [
         ],
     },
     {
-        id: 2,
+        id: 1,
         img: "jacket2.png",
         alt: "Scott Terrain Dryo. Grey rain jacket.",
         manufactor: "Scott",
@@ -34,7 +34,7 @@ export const jackets = [
         ],
     },
     {
-        id: 3,
+        id: 2,
         img: "jacket3.png",
         alt: "Craft Rainy Run. Red rain jacket.",
         manufactor: "Craft",
@@ -51,7 +51,7 @@ export const jackets = [
         ],
     },
     {
-        id: 4,
+        id: 3,
         img: "jacket4.png",
         alt: "Stormberg Boat. Grey and orange rain jacket.",
         manufactor: "Stormberg",
@@ -68,7 +68,7 @@ export const jackets = [
         ],
     },
     {
-        id: 5,
+        id: 4,
         img: "jacket5.png",
         alt: "Rainydays Rain. Grey rain jacket.",
         manufactor: "RAINYDAYS",
@@ -85,7 +85,7 @@ export const jackets = [
         ],
     },
     {
-        id: 6,
+        id: 5,
         img: "jacket6.png",
         alt: "RainWomen. Pink rainjacket.",
         manufactor: "RainWomen",

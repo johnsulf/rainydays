@@ -13,8 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="/assets/icons/icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
-    rel="stylesheet">
   <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -29,103 +27,116 @@
 </head>
 
 <body>
-  <header>
-    <section class="mobile-nav">
-      <input type="checkbox" name="hamburger" id="hamburger">
-      <label for="hamburger"><i class="fa-solid fa-bars fa-xl"></i></label>
-      <nav class="mobile-nav-list">
-        <a href="/index.html">home</a>
-        <a href="/pages/jackets.html?gender=male">men</a>
-        <a href="/pages/jackets.html?gender=female">women</a>
-        <a href="/pages/about.html">about</a>
-        <a href="/pages/contact.html">contact</a>
-      </nav>
-    </section>
-    <a href="/index.html" class="title">rainydays</a>
-    <nav class="nav__links">
-      <a href="/pages/jackets.html?gender=male">men</a>
-      <a href="/pages/jackets.html?gender=female">women</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/pages/contact.html">contact</a>
-    </nav>
-    <div class="nav__icons">
-      <a href="">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
-      <a href="/pages/checkout.html">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <p>$ 0.00</p>
-    </div>
+  <header id="header">
   </header>
   <main>
-    <section class="welcome">
-      <h1 class="category-header"></h1>
-      <p>Beeing suitable for a range of different weather conditions, RAINYDAYS got you covered. Be comfortable whatever
-        adventure you go on.</p>
+    <section class="showcase">
+      <h1 class="category-header text-primary-h"></h1>
+      <p>
+        Beeing suitable for a range of different weather conditions, RAINYDAYS got you covered. Be comfortable whatever
+        adventure you go on.
+      </p>
     </section>
     <section class="products-container">
       <div class="filter">
-        <div>
-          <p>Color</p>
-          <div>
-            <input type="checkbox" id="grey" name="color" value="grey">
-            <label for="grey">Grey</label>
-            <input type="checkbox" id="orange" name="color" value="orange">
-            <label for="orange">Orange</label>
-            <input type="checkbox" id="red" name="color" value="red">
-            <label for="red">Red</label>
-            <input type="checkbox" id="pink" name="color" value="pink">
-            <label for="pink">Pink</label>
+
+        <div class="filter-item" id="color-filter-item">
+          <p class="fw-bold">
+            <span class="filter-label">Color</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
+          <div class="filter-options" id="color-filter-options">
+            <div class="filter-options_option">
+              <input type="checkbox" id="grey" name="color" value="grey">
+              <label for="grey">Grey</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="orange" name="color" value="orange">
+              <label for="orange">Orange</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="red" name="color" value="red">
+              <label for="red">Red</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="pink" name="color" value="pink">
+              <label for="pink">Pink</label>
+            </div>
           </div>
         </div>
 
-        <div>
-          <p>Size</p>
-          <div>
-            <input type="checkbox" id="S" name="size" value="S">
-            <label for="S">Small</label>
-            <input type="checkbox" id="M" name="size" value="M">
-            <label for="M">Medium</label>
-            <input type="checkbox" id="L" name="size" value="L">
-            <label for="L">Large</label>
-            <input type="checkbox" id="XL" name="size" value="XL">
-            <label for="XL">X-Large</label>
+        <div class="filter-item" id="size-filter-item">
+          <p class="fw-bold">
+            <span class="filter-label">Size</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
+          <div class="filter-options" id="size-filter-options">
+            <div class="filter-options_option">
+              <input type="checkbox" id="S" name="size" value="S">
+              <label for="S">Small</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="M" name="size" value="M">
+              <label for="M">Medium</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="L" name="size" value="L">
+              <label for="L">Large</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="checkbox" id="XL" name="size" value="XL">
+              <label for="XL">X-Large</label>
+            </div>
           </div>
         </div>
 
-        <div>
-          <p>Reviews</p>
-          <div>
-            <select id="review-filter">
-              <option value="1">1+</option>
-              <option value="2">2+</option>
-              <option value="3">3+</option>
-              <option value="4">4+</option>
-              <option value="5">5</option>
-            </select>
+        <div class="filter-item" id="review-filter-item">
+          <p class="fw-bold">
+            <span class="filter-label">Review</span>
+            <span class="filter-arrow">&darr;</span>
+          </p>
+          <div class="filter-options" id="review-filter-options">
+            <div class="filter-options_option">
+              <input type="radio" id="1-star" name="reviews" value="1">
+              <label for="1-star">1+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="2-star" name="reviews" value="2">
+              <label for="2-star">2+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="3-star" name="reviews" value="3">
+              <label for="3-star">3+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="4-star" name="reviews" value="4">
+              <label for="4-star">4+</label>
+            </div>
+            <div class="filter-options_option">
+              <input type="radio" id="5-star" name="reviews" value="5">
+              <label for="5-star">5</label>
+            </div>
           </div>
+
         </div>
+
       </div>
 
-      <div class="products">
-        <div class="products__cards">
+      <section class="products">
+        <div class="products_cards">
           /* render jackets with JS */
         </div>
-        <section class="page_nav">
-          <h3>Show more TODO</h3>
-        </section>
-      </div>
+      </section>
     </section>
   </main>
   <footer>
-    <div class="footer__links">
-      <a href="/index.html">account</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/index.html">terms of use</a>
-      <a href="/pages/contact.html">contact</a>
+    <div class="footer-links tt-uppercase">
+      <a href="/index.html" class="text-white">account</a>
+      <a href="/pages/about.html" class="text-white">about</a>
+      <a href="/index.html" class="text-white">terms of use</a>
+      <a href="/pages/contact.html" class="text-white">contact</a>
     </div>
-    <div class="footer__icons">
+    <div class="footer-icons">
       <i class="fa-brands fa-facebook icon"></i>
       <i class="fa-brands fa-twitter icon"></i>
       <i class="fa-brands fa-google icon"></i>
@@ -134,6 +145,8 @@
     <p>&copy;RAINYDAYS</p>
   </footer>
   <script type="module" src="/js/helpers/render_jackets.js"></script>
+  <script type="module" src="/js/components/header.js"></script>
+  <script type="module" src="/js/helpers/show_filters.js"></script>
 </body>
 
 </html>
