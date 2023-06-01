@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </nav>
         <div class="nav-icons">
             <div>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass text-primary"></i>
                 <div class="search">
                     <input type="text" id="search-input" placeholder="Search..." />
                     <div id="search-results"></div>
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <a href="pages/checkout.html">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-counter">0</span>
             </a>
         </div>
     `;
@@ -55,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
     searchInput.addEventListener('input', function (event) {
         const searchTerm = event.target.value.toLowerCase();
 
@@ -83,6 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         searchResultsContainer.innerHTML = html;
     }
+
+    document.addEventListener('cart-updated', function () {
+        const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart') || '[]');
+        const cartCounter = document.querySelector('.cart-counter');
+        cartCounter.textContent = shoppingCart.length;
+    });
 });
 
 

@@ -7,11 +7,11 @@ export const jackets = [
         model: "xtreme GTX",
         price: 99.99,
         stars: 3.8,
-        color: ["grey"],
+        color: ["grey", "orange", "red"],
         gender: ["male"],
         availableSizes: [
             { size: "S", quantity: 3 },
-            { size: "M", quantity: 3 },
+            { size: "M", quantity: 0 },
             { size: "L", quantity: 3 },
             { size: "XL", quantity: 3 }
         ],
@@ -24,7 +24,7 @@ export const jackets = [
         model: "Terrain Dryo",
         price: 199.99,
         stars: 5,
-        color: ["grey"],
+        color: ["grey", "red"],
         gender: ["male", "female", "unisex"],
         availableSizes: [
             { size: "S", quantity: 3 },
@@ -41,13 +41,13 @@ export const jackets = [
         model: "Rainy Run",
         price: 199.99,
         stars: 4.4,
-        color: ["red"],
+        color: ["red", "pink"],
         gender: ["male", "female", "unisex"],
         availableSizes: [
             { size: "S", quantity: 3 },
-            { size: "M", quantity: 3 },
+            { size: "M", quantity: 0 },
             { size: "L", quantity: 3 },
-            { size: "XL", quantity: 3 }
+            { size: "XL", quantity: 0 }
         ],
     },
     {
@@ -63,7 +63,7 @@ export const jackets = [
         availableSizes: [
             { size: "S", quantity: 3 },
             { size: "M", quantity: 3 },
-            { size: "L", quantity: 3 },
+            { size: "L", quantity: 0 },
             { size: "XL", quantity: 3 }
         ],
     },
@@ -79,9 +79,9 @@ export const jackets = [
         gender: ["male", "female", "unisex"],
         availableSizes: [
             { size: "S", quantity: 3 },
-            { size: "M", quantity: 3 },
-            { size: "L", quantity: 3 },
-            { size: "XL", quantity: 3 }
+            { size: "M", quantity: 2 },
+            { size: "L", quantity: 0 },
+            { size: "XL", quantity: 0 }
         ],
     },
     {
@@ -95,10 +95,10 @@ export const jackets = [
         color: ["pink"],
         gender: ["female"],
         availableSizes: [
-            { size: "S", quantity: 3 },
+            { size: "S", quantity: 0 },
             { size: "M", quantity: 3 },
-            { size: "L", quantity: 3 },
-            { size: "XL", quantity: 3 }
+            { size: "L", quantity: 2 },
+            { size: "XL", quantity: 1 }
         ],
     },
 ]

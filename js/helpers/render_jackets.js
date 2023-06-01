@@ -16,12 +16,21 @@ const categoryHeader = document.querySelector(".category-header");
 const gender = params.get('gender');
 
 let filteredJackets = gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
+let productsAmountParagraph = document.querySelector('.products_amount');
 
 let html = "";
 
 function getReviewFilter() {
-    const reviewFilter = document.getElementById('review-filter');
-    return reviewFilter ? parseFloat(reviewFilter.value) : 0;
+    const reviewFilters = document.getElementsByName('reviews');
+    let reviewFilter = 0;
+
+    reviewFilters.forEach(filter => {
+        if(filter.checked) {
+            reviewFilter = parseFloat(filter.value);
+        }
+    });
+
+    return reviewFilter;
 }
 
 function renderJackets() {
@@ -46,17 +55,27 @@ function renderJackets() {
     for (let i = 0; i < jacketsToRender.length; i++) {
         html += renderJacketCard(jacketsToRender[i]);
     }
+
     jacketsContainer.innerHTML = html;
 
-    const filterElements = document.querySelectorAll('.filter input[type="checkbox"], .filter select');
+    // Add event listeners to checkboxes, and radio buttons
+    const filterElements = document.querySelectorAll('.filter input[type="checkbox"], .filter input[type="radio"]');
     if (filterElements.length > 0) {
         filterElements.forEach(el => {
+            el.removeEventListener('change', renderJackets);
             el.addEventListener('change', renderJackets);
         });
     }
+    
+    productsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }
 
-renderJackets();
+// Call renderJackets at the end of the file or inside DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', () => {
+    renderJackets();
+});
+
+
 
 if (categoryHeader) {
     categoryHeader.innerHTML = returnGenderString(gender);
