@@ -28,62 +28,47 @@
 </head>
 
 <body>
-  <header id="header">
-  </header>
+
+  <header id="header"></header>
+
   <main>
 
-    <dialog id="dialog-overlay">
-      <div id="dialog">
-          <p>Item added to cart successfully!</p>
-          <button class="cta">Continue Shopping</button>
-          <button class="cta">Go to Cart</button>
+    <dialog data-modal>
+      <div class="modal-content">
+        <p>Item added to cart successfully!</p>
+        <div class="modal-actions">
+          <button data-close-modal class="cta fs-body-medium">Go Back</button>
+          <button class="cta fs-body-medium">Checkout</button>
+        </div>
       </div>
     </dialog>
-  
-    <section class="jacket-detail">
 
-    </section>
-    <section>
-      <div class="product_info__expansionTile">
-        <p>Product description</p>
-        <p class="plus_sign">+</p>
-      </div>
-      <div class="product_info__expansionTile">
-        <p>Product details</p>
-        <p class="plus_sign">+</p>
-      </div>
-      <div class="product_info__expansionTile">
-        <p>Material and maintanance</p>
-        <p class="plus_sign">+</p>
-      </div>
-      <div class="product_info__expansionTile">
-        <p>Rainydays GTX system</p>
-        <p class="plus_sign">+</p>
-      </div>
-      <div class="product_info__expansionTile last">
-        <p>Reviews</p>
-        <p class="plus_sign">+</p>
-      </div>
-    </section>
+    <section class="jacket-detail"></section>
+
     <h2>Simular products</h2>
     <section class="products">
       <div class="products_cards">
       </div>
     </section>
+
   </main>
+
   <footer>
-    <div class="footer__links">
-      <a href="/index.html">account</a>
-      <a href="/pages/about.html">about</a>
-      <a href="/index.html">terms of use</a>
-      <a href="/pages/contact.html">contact</a>
+
+    <div class="footer-links tt-uppercase">
+      <a href="/index.html" class="text-white">account</a>
+      <a href="/pages/about.html" class="text-white">about</a>
+      <a href="/index.html" class="text-white">terms of use</a>
+      <a href="/pages/contact.html" class="text-white">contact</a>
     </div>
+
     <div class="footer__icons">
       <i class="fa-brands fa-facebook icon"></i>
       <i class="fa-brands fa-twitter icon"></i>
       <i class="fa-brands fa-google icon"></i>
       <i class="fa-brands fa-instagram icon"></i>
     </div>
+
     <p>&copy;RAINYDAYS</p>
   </footer>
 

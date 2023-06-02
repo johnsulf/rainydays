@@ -7,7 +7,7 @@ export const jackets = [
         model: "xtreme GTX",
         price: 99.99,
         stars: 3.8,
-        color: ["grey", "orange", "red"],
+        color: ["grey", "orange", "red", "pink", "blue"],
         gender: ["male"],
         availableSizes: [
             { size: "S", quantity: 3 },

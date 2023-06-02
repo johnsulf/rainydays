@@ -1,7 +1,8 @@
 import { jackets } from "./models/jackets_list.js";
 import { getStars } from "./helpers/gen_helpers.js";
 
-let shoppingCart = [];
+// get the current shopping cart from local storage if it exists, otherwise start with an empty array
+let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
@@ -9,7 +10,7 @@ const id = urlParams.get('id');
 const jacketDetail = document.querySelector(".jacket-detail");
 const j = jackets[id];
 
-const allColors = ["grey", "red", "orange", "pink"];
+const allColors = ["grey", "red", "orange", "blue", "pink"];
 const allSizes = ["S", "M", "L", "XL"];
 
 const colorOptions = allColors.map(color => {
@@ -51,28 +52,30 @@ jacketDetail.innerHTML = `<img src="/assets/images/${j.img}" alt="${j.alt}" clas
                                 ${sizeOptions}
                             </div>
 
-                            <button class="cta disabled" id="add-to-chart">add to cart</button>`;
+                            <button class="cta disabled margin-block-200" id="add-to-chart">add to cart</button>`;
 
 const colorOpts = document.querySelectorAll('.jacket-detail_color_option');
 const sizeOpts = document.querySelectorAll('.jacket-detail_size_option');
 const cta = document.querySelector('#add-to-chart');
+const modal = document.querySelector("[data-modal]")
+const closeModal = document.querySelector("[data-close-modal]")
 
 let selectedColor, selectedSize;
 
 colorOpts.forEach(opt => opt.addEventListener('click', (e) => {
-    
-    if(!opt.classList.contains('faded')) {
-        colorOpts.forEach(opt => opt.classList.remove('selected')); 
-        opt.classList.add('selected');  
+
+    if (!opt.classList.contains('faded')) {
+        colorOpts.forEach(opt => opt.classList.remove('selected'));
+        opt.classList.add('selected');
         selectedColor = opt.dataset.value;
         checkSelection();
     }
 }));
 
 sizeOpts.forEach(opt => opt.addEventListener('click', (e) => {
-    
-    if(!opt.classList.contains('faded')) {
-        sizeOpts.forEach(opt => opt.classList.remove('selected')); 
+
+    if (!opt.classList.contains('faded')) {
+        sizeOpts.forEach(opt => opt.classList.remove('selected'));
         opt.classList.add('selected');
         selectedSize = opt.dataset.value;
         checkSelection();
@@ -80,16 +83,16 @@ sizeOpts.forEach(opt => opt.addEventListener('click', (e) => {
 }));
 
 function checkSelection() {
-    if (selectedColor && selectedSize 
+    if (selectedColor && selectedSize
         && !document.querySelector('.jacket-detail_color_option.selected.faded')
         && !document.querySelector('.jacket-detail_size_option.selected.faded')) {
         cta.classList.remove('disabled');
     } else {
         cta.classList.add('disabled');
-    }   
+    }
 }
 
-cta.addEventListener('click', (e) => {
+cta.addEventListener('click', () => {
     if (!cta.classList.contains('disabled')) {
         const jacketToAdd = {
             ...j,
@@ -99,11 +102,14 @@ cta.addEventListener('click', (e) => {
 
         shoppingCart.push(jacketToAdd);
 
+        // save the updated shoppingCart back to local storage
         localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-        
+
+        // dispatch the event after shopping cart update
         document.dispatchEvent(new CustomEvent('cart-updated'));
-        
-        document.getElementById('dialog-overlay').style.display = 'flex';
+        modal.showModal()
     }
 });
+
+closeModal.addEventListener('click', () => { modal.close() });
 
