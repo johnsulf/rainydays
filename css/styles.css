@@ -678,7 +678,6 @@ label::after {
 @import url(imports/variables.css);
 @import url(components/header.css);
 
-
 * {
     margin: 0;
     padding: 0;
@@ -730,8 +729,6 @@ hr {
     width: 100%;
 }
 
-
-
 .cta {
     background-color: var(--clr-tertiary);
     color: var(--clr-white);
@@ -747,6 +744,10 @@ hr {
 .disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.cart-item_remove {
+    background-color: var(--clr-secondary);
 }
 
 .showcase {
@@ -824,7 +825,8 @@ hr {
     font-size: 0.8rem;
 }
 
-.filter-options_option {
+.filter-options_option,
+.checkout-radio {
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -934,6 +936,20 @@ dialog::backdrop {
 .checkout-subheader {
     background-color: var(--clr-primary);
     padding: var(--size-50);
+}
+
+form input {
+    height: 2rem;
+    width: 90%;
+    border-radius: var(--radius-default);
+    border: 1px solid var(--clr-primary);
+    margin-top: 2px;
+    padding-inline: var(--size-100);
+}
+
+.checkout-complete_content {
+    display: grid;
+    gap: var(--size-50);
 }
 
 .footer-links {

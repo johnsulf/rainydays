@@ -1,5 +1,6 @@
 
 import { jackets } from '../models/jackets_list.js';
+import { renderCartContents } from "../helpers/render_cart_content.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
@@ -115,79 +116,15 @@ function toggleCart() {
 
 function showCart(cartContainer) {
     cartContainer.classList.add('show');
-    displayCartItems();
+    renderCartContents(cartContainer);
 }
 
 function hideCart(cartContainer) {
     cartContainer.classList.remove('show');
 }
 
-function displayCartItems() {
-    const cartContainer = document.querySelector('.cart');
-    let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart') || '[]');
-
-    if (shoppingCart.length === 0) {
-        cartContainer.innerHTML = "<p class='margin-block-100 text-secondary'>Shopping cart is empty</p>";
-        return;
-    }
-
-    let html = '';
-    let total = 0;
-    shoppingCart.forEach((item, index) => {
-        total += parseFloat(item.price); // calculate the total
-        html += `<div class="cart-item">
-                    <img class="cart-item_img" src="/assets/images/${item.img}">
-                    <div class="cart-item_info">
-                        <p class="cart-item_title">${item.model}</p>
-                        <p class="cart-item_subtitle">${item.manufactor}</p>
-                    </div>
-                    <div class="cart-item_info">
-                        <p class="cart-item_subtitle tt-capitalize">${item.selectedColor}</p>
-                        <p class="cart-item_subtitle">${item.selectedSize}</p>
-                        <p class="cart-item_subtitle text-primary">${item.price} $</p>
-                    </div>
-                    <button class="cart-item_remove cta fs-body-small" data-index="${index}">X</button>
-                </div>
-                <hr>`;
-    });
-
-    html += `<div class="cart-total fw-bold">
-                <p>Total: ${total.toFixed(2)} $</p>
-            </div>`; // display the total
-
-    if (shoppingCart.length !== 0) {
-        html += `<div class="cart-to-checkout">
-                    <a href="/pages/checkout.html" class="cta">Go to Checkout</a>
-                </div>`;
-    }
-
-    cartContainer.innerHTML = html;
-
-    document.querySelectorAll('.cart-item_remove').forEach(button => {
-        button.addEventListener('click', event => removeCartItem(event, shoppingCart));
-    });
-}
-
-
-function removeCartItem(event, shoppingCart) {
-    event.stopPropagation();  // stop event bubbling up
-
-    const index = event.target.dataset.index;
-    shoppingCart.splice(index, 1);
-    localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-
-    displayCartItems();
-
-    const cartContainer = document.querySelector('.cart');
-    showCart(cartContainer); // show cart directly after removing an item
-
-    document.dispatchEvent(new CustomEvent('cart-updated'));
-}
-
-
-
 document.addEventListener('cart-updated', function () {
-    const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart') || '[]');
+    const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
     const cartCounter = document.querySelector('.cart-counter');
     cartCounter.textContent = shoppingCart.length;
 });

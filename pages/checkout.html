@@ -26,7 +26,7 @@
   </script>
 </head>
 
-<body>
+<body id="checkout-page">
 
   <header>
     <a href="/pages/jackets.html" class="td-underline">Go back</a>
@@ -41,6 +41,42 @@
       </div>
       <div class="checkout-cart_content"></div>
 
+    </section>
+    <section class="checkout-complete">
+      <div class="checkout-subheader">
+        <h2 class="text-white fs-body">Complete order</h2>
+      </div>
+      <div class="checkout-complete_content">
+        <h3 class="fs-body">Contact</h3>
+        <p class="fs-body-medium">All fields marekd with a star * are required for finishing your order.</p>
+        <form action="POST">
+          <input type="email" name="email" id="email" placeholder="Email*">
+          <input type="text" name="firstname" id="firstname" placeholder="First name*">
+          <input type="text" name="lastname" id="lastname" placeholder="Last name*">
+          <input type="text" name="adress" id="adress" placeholder="Address*">
+          <input type="text" name="zip" id="zip" placeholder="ZIP code*">
+        </form>
+        <h3 class="fs-body">Shipping</h3>
+        <p class="fs-body-medium">Choose shipping method.</p>
+        <div class="checkout-radio">
+          <input type="radio" name="shipping" value="eco" id="eco">
+          <label for="eco">Economy Shipping (2-5 Days) (free)</label>
+        </div>
+        <div class="checkout-radio">
+          <input type="radio" name="shipping" value="fedex" id="fedex">
+          <label for="fedex">FedEx 2-Day (2 Business Days) (free)</label>
+        </div>
+        <h3 class="fs-body">Payment</h3>
+        <p class="fs-body-medium">Choose payment method.</p>
+        <div class="checkout-radio">
+          <input type="radio" name="shipping" value="paypal" id="paypal">
+          <label for="paypal">PayPal</label>
+        </div>
+        <div class="checkout-radio">
+          <input type="radio" name="shipping" value="creditcard" id="creditcard">
+          <label for="creditcard">Credit Card</label>
+        </div>
+      </div>
     </section>
 
     <!--     <section class="checkout_form">
@@ -94,7 +130,7 @@
     </section> -->
 
   </main>
-
+  <script type="module" src="/js/checkout.js"></script>
 </body>
 
 </html>
