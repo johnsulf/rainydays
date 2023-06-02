@@ -23,6 +23,7 @@ function buildHeader() {
         <a href="#" class="menu-close">
             <i class="fa fa-times"></i>
         </a>
+        <a href="/pages/jackets.html">all jackets</a>
         <a href="/pages/jackets.html?gender=male">men</a>
         <a href="/pages/jackets.html?gender=female">women</a>
         <a href="/pages/about.html">about</a>
