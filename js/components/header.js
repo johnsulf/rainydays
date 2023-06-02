@@ -141,8 +141,8 @@ function displayCartItems() {
                         <p class="cart-item_subtitle">${item.manufactor}</p>
                     </div>
                     <div class="cart-item_info">
-                        <p class="cart-item_subtitle">Color: <span class="tt-capitalize">${item.selectedColor}</span></p>
-                        <p class="cart-item_subtitle">Size: ${item.selectedSize}</p>
+                        <p class="cart-item_subtitle tt-capitalize">${item.selectedColor}</p>
+                        <p class="cart-item_subtitle">${item.selectedSize}</p>
                         <p class="cart-item_subtitle text-primary">${item.price} $</p>
                     </div>
                     <button class="cart-item_remove cta fs-body-small" data-index="${index}">X</button>

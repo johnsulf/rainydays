@@ -786,6 +786,7 @@ hr {
     right: var(--size-50);
     top: 4rem;
     display: none;
+    z-index: 5;
 }
 
 .search input {
@@ -859,6 +860,11 @@ hr {
     border-radius: var(--radius-default);
     text-align: center;
     cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .cart-item_remove {
