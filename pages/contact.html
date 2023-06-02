@@ -31,35 +31,50 @@
 <body>
   <header id="header"></header>
   <main>
-    <section class="checkout_container">
+
+    <dialog data-modal>
+      <div class="modal-content">
+        <p class="fw-bold">Thank you for contacting us!</p>
+        <p>We will get back to you as soon as we can.</p>
+        <p>Questions? Please contact us!</p>
+        <p class="fw-bold">Thank you for visiting <span class="text-primary tt-uppercase">rainydays</span></p>
+        <div class="modal-actions">
+          <a href="/pages/contact.html" class="cta fs-body-medium">close</a>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="contact">
       <div>
         <a href="/pages/about.html" class="categories__card stacked">
           <img src="/assets/images/red_jacket.jpeg" alt="Man in red jacket in forest.">
-          <h1 class="dark_background">contact</h1>
+          <h1 class="text-white tt-uppercase bg-primary80">contact</h1>
         </a>
       </div>
-      <div>
-        <section class="contact_info">
-          <p>RAINYDAYS</p>
-          <p>Box 469</p>
-          <p>In The Middle Of Nowere 46</p>
-          <p>91299 Lake Rain</p>
-          <p>USA</p>
-          <p>email: <span class="red_color underline">contact@rainydays.com</span></p>
-          <p>phone: 09101010</p>
-          <p>web: <span class="red_color underline">www.rainydays.com</span></p>
-        </section>
-        <section class="checkout_form">
-          <h2 class="form_header">Contact us</h2>
-          <form action="submit.php" method="POST">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </form>
-          <a href="/index.html" class="cta">complete</a>
-        </section>
-      </div>
+      <section class="contact-info">
+        <p class="text-primary tt-uppercase fw-bold">RAINYDAYS</p>
+        <p>Box 469</p>
+        <p>In The Middle Of Nowere 46</p>
+        <p>91299 Lake Rain</p>
+        <p>USA</p>
+        <p>email: <span class="text-tertiary td-underline">contact@rainydays.com</span></p>
+        <p>phone: 09101010</p>
+        <p>web: <span class="text-tertiary td-underline">www.rainydays.com</span></p>
+      </section>
+      <section class="contact-form">
+        <h2 class="form_header">Contact us</h2>
+        <form action="submit.php" method="POST" id="contact-form">
+          <div>
+            <input type="email" name="email" id="email" placeholder="Email*" required>
+            <p id="email-error" class="text-secondary fs-body-small hidden">Please enter a valid email adress</p>
+          </div>
+          <div>
+            <textarea id="message" name="message" rows="4" placeholder="Message*" required></textarea>
+            <p id="message-error" class="text-secondary fs-body-small hidden">Please enter a message</p>
+          </div>
+          <button type="submit" class="cta margin-block-100 fs-body disabled" id="send-message">send message</button>
+        </form>
+      </section>
     </section>
   </main>
 
@@ -67,6 +82,7 @@
 
   <script type="module" src="/js/components/header.js"></script>
   <script type="module" src="/js/components/footer.js"></script>
+  <script type="module" src="/js/contact.js"></script>
 </body>
 
 </html>

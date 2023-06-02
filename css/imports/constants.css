@@ -84,6 +84,10 @@
     background-color: var(--clr-primary10);
 }
 
+.bg-primary80 {
+    background-color: var(--clr-primary80);
+}
+
 .bg-secondary10 {
     background-color: var(--clr-secondary10);
 }

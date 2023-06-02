@@ -946,11 +946,16 @@ form {
 
 form input {
     height: 2rem;
+}
+
+form input,
+textarea {
     width: 90%;
     border-radius: var(--radius-default);
     border: 1px solid var(--clr-primary);
     margin-top: 2px;
     padding-inline: var(--size-100);
+
 }
 
 .form-error {
@@ -962,6 +967,11 @@ form input {
 }
 
 .checkout-complete_content {
+    display: grid;
+    gap: var(--size-50);
+}
+
+.contact-info {
     display: grid;
     gap: var(--size-50);
 }
