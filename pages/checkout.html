@@ -47,6 +47,9 @@
         <h2 class="text-white fs-body">Complete order</h2>
       </div>
       <div class="checkout-complete_content">
+
+        <hr class="margin-block-50">
+
         <h3 class="fs-body">Contact</h3>
         <p class="fs-body-medium">All fields marekd with a star * are required for finishing your order.</p>
         <form action="POST">
@@ -56,6 +59,9 @@
           <input type="text" name="adress" id="adress" placeholder="Address*">
           <input type="text" name="zip" id="zip" placeholder="ZIP code*">
         </form>
+
+        <hr>
+
         <h3 class="fs-body">Shipping</h3>
         <p class="fs-body-medium">Choose shipping method.</p>
         <div class="checkout-radio">
@@ -66,6 +72,9 @@
           <input type="radio" name="shipping" value="fedex" id="fedex">
           <label for="fedex">FedEx 2-Day (2 Business Days) (free)</label>
         </div>
+
+        <hr>
+
         <h3 class="fs-body">Payment</h3>
         <p class="fs-body-medium">Choose payment method.</p>
         <div class="checkout-radio">
@@ -76,61 +85,16 @@
           <input type="radio" name="shipping" value="creditcard" id="creditcard">
           <label for="creditcard">Credit Card</label>
         </div>
+
+        <hr>
+
       </div>
     </section>
 
-    <!--     <section class="checkout_form">
-      <form action="submit.php" method="POST">
-        <h2 class="form_header">1/4. delivery adress</h2>
-        <label for="firstname">First name*</label> <input type="firstname" name="firstname" id="firstname">
-        <label for="lastname">Last name*</label> <input type="lastname" name="lastname" id="lastname">
-        <label for="adress">Adress*</label> <input type="adress" name="adress" id="adress">
-        <label for="zip">ZIP code*</label> <input type="zip" name="zip" id="zip">
-        <label for="country">Country*</label>
-        <select name="country" id="country">
-          <option value="usa" id="usa">USA</option>
-          <option value="norway" id="norway">Norway</option>
-          <option value="sweden" id="sweden">Sweden</option>
-          <option value="denmark" id="denmark">Denmark</option>
-        </select>
-        <label for="tel">Phone number*</label> <input type="tel" name="tel" id="country">
-        <h2 class="form_header">2/4. shipping</h2>
-        <div class="radio">
-          <input type="radio" name="shipping" value="eco" id="eco">
-          <label for="eco">Economy Shipping (2-5 Days)</label>
-        </div>
-        <div class="radio">
-          <input type="radio" name="shipping" value="fedex" id="fedex">
-          <label for="fedex">FedEx 2-Day (2 Business Days)</label>
-        </div>
-        <h2 class="form_header">3/4. payment</h2>
-        <label for="card_holder">Card holder</label> <input type="name" name="card_holder" id="card_holder">
-        <label for="card_number">Credit card number*</label> <input type="number" name="card_number" id="card_number">
-        <label for="card_cvv">Secutiry code*</label> <input type="number" name="card_cvv" id="card_cvv">
-        <label for="card_exp">Expiration date*</label> <input type="month" name="card_exp" id="card_exp">
-        <h2 class="form_header">4/4. review & complete</h2>
-        <div class="checkout_review">
-          <h2 class="summary_header">xtreme GTX</h2>
-          <p>Size: S, Color: Grey</p>
-          <div class="checkout_review__text">
-            <p>Product price:</p>
-            <p>$99.99</p>
-          </div>
-          <div class="checkout_review__text">
-            <p>Shipping:</p>
-            <p class="small_text overline">$9.99</p>
-          </div>
-          <div class="checkout_review__text total">
-            <p>Total:</p>
-            <p>$99.99</p>
-          </div>
-        </div>
-        <a href="success.html" class="cta">complete</a>
-      </form>
-    </section> -->
-
   </main>
+
   <script type="module" src="/js/checkout.js"></script>
+
 </body>
 
 </html>
