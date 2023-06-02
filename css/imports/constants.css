@@ -55,6 +55,10 @@
     font-size: var(--fs-500);
 }
 
+.td-underline {
+    text-decoration: underline;
+}
+
 .tt-uppercase {
     text-transform: var(--tt-upper);
 }
