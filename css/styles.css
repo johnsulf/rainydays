@@ -710,7 +710,8 @@ footer {
 
 h1,
 h2,
-a {
+a,
+.cta {
     font-family: var(--ff-secondary);
     color: var(--clr-primary);
     font-weight: 500;
@@ -759,7 +760,7 @@ hr {
 }
 
 .showcase p {
-    width: 60%;
+    width: 70%;
 }
 
 .stacked {
@@ -938,6 +939,11 @@ dialog::backdrop {
     padding: var(--size-50);
 }
 
+form {
+    display: grid;
+    gap: var(--size-50);
+}
+
 form input {
     height: 2rem;
     width: 90%;
@@ -945,6 +951,14 @@ form input {
     border: 1px solid var(--clr-primary);
     margin-top: 2px;
     padding-inline: var(--size-100);
+}
+
+.form-error {
+    border: 2px solid var(--clr-red);
+}
+
+.hidden {
+    display: none;
 }
 
 .checkout-complete_content {

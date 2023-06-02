@@ -34,6 +34,19 @@
   </header>
 
   <main>
+
+    <dialog data-modal>
+      <div class="modal-content">
+        <p class="fw-bold">Your order has been completed!</p>
+        <p>A confirmation email is on its way.</p>
+        <p>Questions? Please contact us!</p>
+        <p class="fw-bold">Thank you for shopping at <span class="text-primary tt-uppercase">rainydays</span></p>
+        <div class="modal-actions">
+          <a href="/" class="cta fs-body-medium">home</a>
+        </div>
+      </div>
+    </dialog>
+
     <h1>Checkout</h1>
     <section class="checkout-cart">
       <div class="checkout-subheader">
@@ -51,42 +64,52 @@
         <hr class="margin-block-50">
 
         <h3 class="fs-body">Contact</h3>
-        <p class="fs-body-medium">All fields marekd with a star * are required for finishing your order.</p>
+        <p class="fs-body-medium">All fields marked with a star * are required for finishing your order.</p>
         <form action="POST">
-          <input type="email" name="email" id="email" placeholder="Email*">
-          <input type="text" name="firstname" id="firstname" placeholder="First name*">
-          <input type="text" name="lastname" id="lastname" placeholder="Last name*">
-          <input type="text" name="adress" id="adress" placeholder="Address*">
-          <input type="text" name="zip" id="zip" placeholder="ZIP code*">
+          <div>
+            <input type="email" name="email" id="email" placeholder="Email*" required>
+            <p id="email-error" class="text-secondary fs-body-small hidden">Please enter a valid email adress</p>
+          </div>
+          <input type="text" name="firstname" id="firstname" placeholder="First name*" required>
+          <input type="text" name="lastname" id="lastname" placeholder="Last name*" required>
+          <input type="text" name="adress" id="adress" placeholder="Address*" required>
+          <div>
+            <input type="number" name="zip" id="zip" placeholder="ZIP code (4 digits)*" required>
+            <p id="zip-error" class="text-secondary fs-body-small hidden">Please enter a 4 digit ZIP-code</p>
+          </div>
+
         </form>
 
         <hr>
 
         <h3 class="fs-body">Shipping</h3>
-        <p class="fs-body-medium">Choose shipping method.</p>
+        <p class="fs-body-medium">Choose shipping method*</p>
         <div class="checkout-radio">
-          <input type="radio" name="shipping" value="eco" id="eco">
+          <input type="radio" name="shipping" value="eco" id="eco" required>
           <label for="eco">Economy Shipping (2-5 Days) (free)</label>
         </div>
         <div class="checkout-radio">
-          <input type="radio" name="shipping" value="fedex" id="fedex">
+          <input type="radio" name="shipping" value="fedex" id="fedex" required>
           <label for="fedex">FedEx 2-Day (2 Business Days) (free)</label>
         </div>
 
         <hr>
 
         <h3 class="fs-body">Payment</h3>
-        <p class="fs-body-medium">Choose payment method.</p>
+        <p class="fs-body-medium">Choose payment method*</p>
         <div class="checkout-radio">
-          <input type="radio" name="shipping" value="paypal" id="paypal">
+          <input type="radio" name="payment" value="paypal" id="paypal" required>
           <label for="paypal">PayPal</label>
         </div>
         <div class="checkout-radio">
-          <input type="radio" name="shipping" value="creditcard" id="creditcard">
+          <input type="radio" name="payment" value="creditcard" id="creditcard" required>
           <label for="creditcard">Credit Card</label>
         </div>
 
         <hr>
+
+        <button type="submit" id="complete-order-cta" class="cta disabled fs-tertiary-h margin-block-100">complete
+          order</button>
 
       </div>
     </section>
