@@ -958,6 +958,11 @@ textarea {
 
 }
 
+input[type='text'] {
+    font-size: 16px;
+}
+
+
 .form-error {
     border: 2px solid var(--clr-red);
 }
