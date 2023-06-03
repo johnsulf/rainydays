@@ -28,22 +28,23 @@ function generateSizeOptions(sizes) {
     }).join('');
 }
 
-jacketDetail.innerHTML = `
-    <img src="/assets/images/${j.img}" alt="${j.alt}" class="jacket-detail_img">
-    <div class="jacket-detail_stars">
-        <p>${getStars(j.stars)}</p>
-        <p>${j.stars}</p>
-    </div>
-    <div class="jacket-detail_info">
-        <h1>${j.model}</h1>
-        <p>${j.manufactor}</p>
-        <p class="jacket-detail_price">${j.price} $</p>
-    </div>
-    <p class="fs-body-medium">Pick color</p>
-    <div class="jacket-detail_color">${generateColorOptions(allColors)}</div>
-    <p class="fs-body-medium">Choose size</p>
-    <div class="jacket-detail_size">${generateSizeOptions(allSizes)}</div>
-    <button class="cta disabled margin-block-200 fs-body" id="add-to-chart">add to cart</button>`;
+jacketDetail.innerHTML = `<div class="jacket-detail_img-stars">
+                            <img src="/assets/images/${j.img}" alt="${j.alt}" class="jacket-detail_img">
+                            <div class="jacket-detail_stars">
+                                <p>${getStars(j.stars)}</p>
+                                <p>${j.stars}</p>
+                            </div>
+                        </div>
+                        <div class="jacket-detail_info">
+                            <h1>${j.model}</h1>
+                            <p>${j.manufactor}</p>
+                            <p class="jacket-detail_price">${j.price} $</p>
+                            <p class="fs-body-medium fw-bold">Pick color</p>
+                            <div class="jacket-detail_color">${generateColorOptions(allColors)}</div>
+                            <p class="fs-body-medium fw-bold">Choose size</p>
+                            <div class="jacket-detail_size">${generateSizeOptions(allSizes)}</div>
+                            <button class="cta disabled margin-block-200 fs-body" id="add-to-chart">add to cart</button>
+                        </div>`;
 
 let selectedColor, selectedSize;
 

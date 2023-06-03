@@ -689,7 +689,7 @@ html {
     font-family: var(--ff-primary);
     color: var(--clr-black);
     height: 100%;
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -749,6 +749,8 @@ hr {
 
 .cart-item_remove {
     background-color: var(--clr-secondary);
+    width: 2rem;
+    justify-self: end;
 }
 
 .showcase {
@@ -775,11 +777,6 @@ hr {
     grid-row: 1/2;
 }
 
-.overflow {
-    overflow-x: scroll;
-    scrollbar-width: thin;
-}
-
 .column {
     display: flex;
     flex-wrap: wrap;
@@ -790,6 +787,8 @@ hr {
 .row {
     display: flex;
     gap: var(--size-100);
+    overflow-x: scroll;
+    scrollbar-width: thin;
 }
 
 .jackets_cards__card img {
@@ -821,7 +820,7 @@ hr {
 .filter-item,
 .filter-options {
     background-color: var(--clr-white);
-    width: 5rem;
+    width: 6rem;
     padding: var(--size-50);
 }
 
@@ -830,7 +829,7 @@ hr {
     position: absolute;
     box-shadow: var(--box-shadow);
     animation-duration: 0.5s;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .filter-options_option,
@@ -857,9 +856,14 @@ hr {
     gap: 0.25rem;
 }
 
+.jacket-detail_img-stars {
+    display: grid;
+    align-items: center;
+}
+
 .jacket-detail_img {
     justify-self: center;
-    width: 15rem;
+    width: 90%;
     height: 15rem;
     object-fit: contain;
     padding: var(--size-100);
@@ -937,11 +941,6 @@ dialog::backdrop {
     background: #000000b0;
 }
 
-.checkout-subheader {
-    background-color: var(--clr-primary);
-    padding: var(--size-50);
-}
-
 form {
     display: grid;
     gap: var(--size-50);
@@ -983,9 +982,19 @@ textarea {
     gap: var(--size-50);
 }
 
+.checkout-subheader {
+    background-color: var(--clr-primary);
+    padding: var(--size-50);
+}
+
 .contact-info {
     display: grid;
     gap: var(--size-50);
+}
+
+.about-header img {
+    height: 20rem;
+    object-fit: cover;
 }
 
 .footer-links {
@@ -1050,7 +1059,6 @@ textarea {
 
     .nav-links {
         position: relative;
-        display: flex;
         flex-direction: row;
         transform: translateX(0);
     }
@@ -1064,4 +1072,16 @@ textarea {
         justify-content: start;
     }
 
+    .jacket-detail {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .contact,
+    .about-img-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--size-100);
+        justify-content: center;
+    }
 }

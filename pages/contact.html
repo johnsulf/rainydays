@@ -15,21 +15,12 @@
   <link rel="icon" href="/assets/icons/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald:wght@500&display=swap"
     rel="stylesheet">
-  <!-- Hotjar Tracking Code for https://steady-valkyrie-d7b2a3.netlify.app/ -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 3457715, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
 </head>
 
 <body>
+
   <header id="header"></header>
+
   <main>
 
     <dialog data-modal>
@@ -50,30 +41,32 @@
           <h1 class="text-white tt-uppercase bg-primary80">contact</h1>
         </a>
       </div>
-      <section class="contact-info">
-        <p class="text-primary tt-uppercase fw-bold">RAINYDAYS</p>
-        <p>Box 469</p>
-        <p>In The Middle Of Nowere 46</p>
-        <p>91299 Lake Rain</p>
-        <p>USA</p>
-        <p>email: <span class="text-tertiary td-underline">contact@rainydays.com</span></p>
-        <p>phone: 09101010</p>
-        <p>web: <span class="text-tertiary td-underline">www.rainydays.com</span></p>
-      </section>
-      <section class="contact-form">
-        <h2 class="form_header">Contact us</h2>
-        <form action="submit.php" method="POST" id="contact-form">
-          <div>
-            <input type="email" name="email" id="email" placeholder="Email*" required>
-            <p id="email-error" class="text-secondary fs-body-small hidden">Please enter a valid email adress</p>
-          </div>
-          <div>
-            <textarea id="message" name="message" rows="4" placeholder="Message*" required></textarea>
-            <p id="message-error" class="text-secondary fs-body-small hidden">Please enter a message</p>
-          </div>
-          <button type="submit" class="cta margin-block-100 fs-body disabled" id="send-message">send message</button>
-        </form>
-      </section>
+      <div>
+        <section class="contact-info">
+          <p class="text-primary tt-uppercase fw-bold">RAINYDAYS</p>
+          <p>Box 469</p>
+          <p>In The Middle Of Nowere 46</p>
+          <p>91299 Lake Rain</p>
+          <p>USA</p>
+          <p>email: <span class="text-tertiary td-underline">contact@rainydays.com</span></p>
+          <p>phone: 09101010</p>
+          <p>web: <span class="text-tertiary td-underline">www.rainydays.com</span></p>
+        </section>
+        <section class="contact-form">
+          <h2 class="form_header">Contact us</h2>
+          <form action="submit.php" method="POST" id="contact-form">
+            <div>
+              <input type="email" name="email" id="email" placeholder="Email*" required>
+              <p id="email-error" class="text-secondary fs-body-small hidden">Please enter a valid email adress</p>
+            </div>
+            <div>
+              <textarea id="message" name="message" rows="4" placeholder="Message*" required></textarea>
+              <p id="message-error" class="text-secondary fs-body-small hidden">Please enter a message</p>
+            </div>
+            <button type="submit" class="cta margin-block-100 fs-body disabled" id="send-message">send message</button>
+          </form>
+        </section>
+      </div>
     </section>
   </main>
 
