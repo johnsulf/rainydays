@@ -31,18 +31,16 @@ function buildHeader() {
         <a href="/pages/contact.html">contact</a>
     </nav>
     <div class="nav-icons">
-        <a>
+        <a href="#">
             <i class="fa-solid fa-magnifying-glass text-primary"></i>
             <div class="search">
                 <input type="text" id="search-input" placeholder="Search..." />
                 <div id="search-results"></div>
             </div>
         </a>  
-        <a class="nav-icons_cart">
-            <div class="nav-icons_cart">
+        <a href="#" class="nav-icons_cart">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-counter">0</span>
-            </div>
             <div class="cart"></div>
         </a>
     </div>`;
