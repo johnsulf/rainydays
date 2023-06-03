@@ -60,3 +60,7 @@ function validateField(field) {
     return isValid;
 }
 
+document.querySelector("[data-close-modal]").addEventListener('click', () => {
+    document.querySelector("[data-modal]").close();
+});
+
