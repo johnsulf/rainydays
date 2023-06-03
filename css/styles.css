@@ -775,31 +775,38 @@ hr {
     grid-row: 1/2;
 }
 
-.products {
+.overflow {
     overflow-x: scroll;
     scrollbar-width: thin;
 }
 
-.products_cards {
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--size-100);
+}
+
+.row {
     display: flex;
     gap: var(--size-100);
 }
 
-.products_cards__card img {
-    width: 10rem;
-    height: 10rem;
+.jackets_cards__card img {
+    width: 8rem;
+    height: 8rem;
     object-fit: contain;
     padding: var(--size-50);
     background-color: var(--clr-primary10);
 }
 
-.products_cards__card__stars {
+.jackets_cards__card__stars {
     display: flex;
     align-items: center;
     gap: var(--size-50);
 }
 
-.products_amount {
+.jackets_amount {
     padding: var(--size-100);
     font-size: 0.75rem;
     text-align: center;
@@ -916,17 +923,13 @@ dialog {
     border: 1px solid var(--clr-primary10);
     border-radius: var(--radius-default);
     width: 80%;
-    max-width: 50rem;
+    max-width: 30rem;
 }
 
 .modal-content {
     display: grid;
-    gap: var(--size-100);
-}
-
-.modal-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
     gap: var(--size-100);
 }
 
@@ -955,11 +958,15 @@ textarea {
     border: 1px solid var(--clr-primary);
     margin-top: 2px;
     padding-inline: var(--size-100);
-
 }
 
-input[type='text'] {
-    font-size: 16px;
+textarea {
+    padding-top: var(--size-50);
+}
+
+input {
+    font-size: 1rem;
+    font-family: sans-serif;
 }
 
 
@@ -1052,4 +1059,9 @@ input[type='text'] {
         display: flex;
         gap: var(--size-100);
     }
+
+    .column {
+        justify-content: start;
+    }
+
 }

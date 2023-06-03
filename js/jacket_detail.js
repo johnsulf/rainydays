@@ -43,7 +43,7 @@ jacketDetail.innerHTML = `
     <div class="jacket-detail_color">${generateColorOptions(allColors)}</div>
     <p class="fs-body-medium">Choose size</p>
     <div class="jacket-detail_size">${generateSizeOptions(allSizes)}</div>
-    <button class="cta disabled margin-block-200" id="add-to-chart">add to cart</button>`;
+    <button class="cta disabled margin-block-200 fs-body" id="add-to-chart">add to cart</button>`;
 
 let selectedColor, selectedSize;
 

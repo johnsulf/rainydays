@@ -40,12 +40,15 @@ export function renderCartContents(container) {
 
     // Add event listeners for remove buttons
     const removeButtons = container.querySelectorAll(".cart-item_remove");
+
+    const containerSelector = container.className.includes('checkout-cart_content') ? '.checkout-cart_content' : '.cart';
     removeButtons.forEach(button => {
-        button.addEventListener('click', removeCartItem);
+        button.addEventListener('click', (event) => removeCartItem(event, containerSelector));
     });
 }
 
-function removeCartItem(event) {
+
+function removeCartItem(event, containerSelector) {
     event.stopPropagation();  // stop event bubbling up
 
     const index = event.target.dataset.index;
@@ -53,8 +56,9 @@ function removeCartItem(event) {
     shoppingCart.splice(index, 1);
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 
-    const cartContainer = document.querySelector('.cart');
+    const cartContainer = document.querySelector(containerSelector);
     renderCartContents(cartContainer); // show cart directly after removing an item
 
     document.dispatchEvent(new CustomEvent('cart-updated'));
 }
+

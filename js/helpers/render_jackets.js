@@ -10,13 +10,13 @@ import {
 
 const params = new URLSearchParams(window.location.search);
 
-const jacketsContainer = document.querySelector(".products_cards");
+const jacketsContainer = document.querySelector(".jackets_cards");
 const categoryHeader = document.querySelector(".category-header");
 
 const gender = params.get('gender');
 
 let filteredJackets = gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
-let productsAmountParagraph = document.querySelector('.products_amount');
+let jacketsAmountParagraph = document.querySelector('.jackets_amount');
 
 let html = "";
 
@@ -25,7 +25,7 @@ function getReviewFilter() {
     let reviewFilter = 0;
 
     reviewFilters.forEach(filter => {
-        if(filter.checked) {
+        if (filter.checked) {
             reviewFilter = parseFloat(filter.value);
         }
     });
@@ -66,8 +66,8 @@ function renderJackets() {
             el.addEventListener('change', renderJackets);
         });
     }
-    
-    productsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
+
+    jacketsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }
 
 // Call renderJackets at the end of the file or inside DOMContentLoaded event

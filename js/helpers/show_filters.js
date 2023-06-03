@@ -1,3 +1,5 @@
+
+
 document.querySelectorAll('.filter-item').forEach((item) => {
     item.addEventListener('click', function (event) {
         let options = this.querySelector('.filter-options');
