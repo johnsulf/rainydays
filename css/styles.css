@@ -960,15 +960,15 @@ textarea {
     padding-inline: var(--size-100);
 }
 
+input,
 textarea {
-    padding-top: var(--size-50);
-}
-
-input {
     font-size: 1rem;
     font-family: sans-serif;
 }
 
+textarea {
+    padding-top: var(--size-50);
+}
 
 .form-error {
     border: 2px solid var(--clr-red);
