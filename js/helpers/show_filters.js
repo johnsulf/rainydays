@@ -15,13 +15,12 @@ document.querySelectorAll('.filter-item').forEach((item) => {
             options.classList.add('slideOutUp');
             setTimeout(() => {
                 options.style.display = 'none';
-            }, 500); // Matches the duration of the animation
+            }, 500);
             this.classList.remove('active');
             arrow.innerHTML = '&darr;';
         }
     });
 
-    // Stop propagation on checkboxes
     item.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
         checkbox.addEventListener('click', function (event) {
             event.stopPropagation();

@@ -10,10 +10,10 @@ export const jackets = [
         color: ["grey", "orange", "red", "pink", "blue"],
         gender: ["male"],
         availableSizes: [
-            { size: "S", quantity: 3 },
+            { size: "S", quantity: 2 },
             { size: "M", quantity: 0 },
-            { size: "L", quantity: 3 },
-            { size: "XL", quantity: 3 }
+            { size: "L", quantity: 1 },
+            { size: "XL", quantity: 0 }
         ],
     },
     {
@@ -27,10 +27,10 @@ export const jackets = [
         color: ["grey", "red"],
         gender: ["male", "female", "unisex"],
         availableSizes: [
-            { size: "S", quantity: 3 },
-            { size: "M", quantity: 3 },
-            { size: "L", quantity: 3 },
-            { size: "XL", quantity: 3 }
+            { size: "S", quantity: 8 },
+            { size: "M", quantity: 1 },
+            { size: "L", quantity: 0 },
+            { size: "XL", quantity: 4 }
         ],
     },
     {
@@ -44,9 +44,9 @@ export const jackets = [
         color: ["red", "pink"],
         gender: ["male", "female", "unisex"],
         availableSizes: [
-            { size: "S", quantity: 3 },
+            { size: "S", quantity: 2 },
             { size: "M", quantity: 0 },
-            { size: "L", quantity: 3 },
+            { size: "L", quantity: 1 },
             { size: "XL", quantity: 0 }
         ],
     },
@@ -61,10 +61,10 @@ export const jackets = [
         color: ["grey", "orange"],
         gender: ["male"],
         availableSizes: [
-            { size: "S", quantity: 3 },
-            { size: "M", quantity: 3 },
+            { size: "S", quantity: 6 },
+            { size: "M", quantity: 1 },
             { size: "L", quantity: 0 },
-            { size: "XL", quantity: 3 }
+            { size: "XL", quantity: 0 }
         ],
     },
     {

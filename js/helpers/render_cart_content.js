@@ -11,7 +11,7 @@ export function renderCartContents(container) {
     let total = 0;
 
     shoppingCart.forEach((item, index) => {
-        total += parseFloat(item.price); // calculate the total
+        total += parseFloat(item.price);
         html += `<div class="cart-item">
                     <img class="cart-item_img" src="/assets/images/${item.img}">
                     <div class="cart-item_info">
@@ -28,7 +28,7 @@ export function renderCartContents(container) {
 
     html += `<div class="cart-total fw-bold">
                 <p>Total: ${total.toFixed(2)} $</p>
-            </div>`; // display the total
+            </div>`;
 
     if (shoppingCart.length !== 0 && !document.getElementById('checkout-page')) {
         html += `<div class="cart-to-checkout">
@@ -38,7 +38,6 @@ export function renderCartContents(container) {
 
     container.innerHTML = html;
 
-    // Add event listeners for remove buttons
     const removeButtons = container.querySelectorAll(".cart-item_remove");
 
     const containerSelector = container.className.includes('checkout-cart_content') ? '.checkout-cart_content' : '.cart';
@@ -49,7 +48,7 @@ export function renderCartContents(container) {
 
 
 function removeCartItem(event, containerSelector) {
-    event.stopPropagation();  // stop event bubbling up
+    event.stopPropagation();
 
     const index = event.target.dataset.index;
     let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
@@ -57,7 +56,7 @@ function removeCartItem(event, containerSelector) {
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 
     const cartContainer = document.querySelector(containerSelector);
-    renderCartContents(cartContainer); // show cart directly after removing an item
+    renderCartContents(cartContainer);
 
     document.dispatchEvent(new CustomEvent('cart-updated'));
 }

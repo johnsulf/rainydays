@@ -17,33 +17,33 @@ function buildHeader() {
     const header = document.querySelector('#header');
     header.innerHTML = header.innerHTML =
         `<a href="#" class="menu-toggle">
-        <i class="fa fa-bars"></i>
-    </a>
-    <a href="/" class="tt-uppercase fs-secondary-h">rainydays</a>
-    <nav class="nav-links tt-uppercase">
-        <a href="#" class="menu-close">
-            <i class="fa fa-times"></i>
+            <i class="fa fa-bars"></i>
         </a>
-        <a href="/pages/jackets.html">all jackets</a>
-        <a href="/pages/jackets.html?gender=male">men</a>
-        <a href="/pages/jackets.html?gender=female">women</a>
-        <a href="/pages/about.html">about</a>
-        <a href="/pages/contact.html">contact</a>
-    </nav>
-    <div class="nav-icons">
-        <a href="#">
-            <i class="fa-solid fa-magnifying-glass text-primary"></i>
-            <div class="search">
-                <input type="text" id="search-input" placeholder="Search..." />
-                <div id="search-results"></div>
-            </div>
-        </a>  
-        <a href="#" class="nav-icons_cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-counter">0</span>
-            <div class="cart"></div>
-        </a>
-    </div>`;
+        <a href="/" class="tt-uppercase fs-secondary-h">rainydays</a>
+        <nav class="nav-links tt-uppercase">
+            <a href="#" class="menu-close">
+                <i class="fa fa-times"></i>
+            </a>
+            <a href="/pages/jackets.html">all jackets</a>
+            <a href="/pages/jackets.html?gender=male">men</a>
+            <a href="/pages/jackets.html?gender=female">women</a>
+            <a href="/pages/about.html">about</a>
+            <a href="/pages/contact.html">contact</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="#">
+                <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                <div class="search">
+                    <input type="text" id="search-input" placeholder="Search..." />
+                    <div id="search-results"></div>
+                </div>
+            </a>  
+            <a href="#" class="nav-icons_cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-counter">0</span>
+                <div class="cart"></div>
+            </a>
+        </div>`;
 
     // handle menu toggle
     const menuToggle = document.querySelector('.menu-toggle');

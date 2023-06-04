@@ -42,7 +42,7 @@ function initCheckout() {
     }
 
     submitButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Stop the form from submitting
+        event.preventDefault();
         if (!submitButton.classList.contains('disabled')) {
             clearLocalStorage();
             clearForm(formFields, submitButton);
@@ -56,6 +56,5 @@ function renderCartSummary() {
 }
 
 function clearLocalStorage() {
-    localStorage.clear(); // this will remove all items in the local storage
-    // if you want to only clear the cart, replace with localStorage.removeItem('cart') or whatever the key for the cart is
+    localStorage.clear();
 }

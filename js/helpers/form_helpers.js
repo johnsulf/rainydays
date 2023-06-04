@@ -1,3 +1,4 @@
+
 export function addFormValidation(formFields, submitButton, fieldValidFunc, modal) {
     formFields.forEach(field => {
         field.addEventListener('input', () => {
@@ -6,7 +7,7 @@ export function addFormValidation(formFields, submitButton, fieldValidFunc, moda
     });
 
     submitButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Stop the form from submitting
+        event.preventDefault();
         if (!submitButton.classList.contains('disabled')) {
             modal.showModal();
         }

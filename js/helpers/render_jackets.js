@@ -58,7 +58,6 @@ function renderJackets() {
 
     jacketsContainer.innerHTML = html;
 
-    // Add event listeners to checkboxes, and radio buttons
     const filterElements = document.querySelectorAll('.filter input[type="checkbox"], .filter input[type="radio"]');
     if (filterElements.length > 0) {
         filterElements.forEach(el => {
@@ -70,12 +69,9 @@ function renderJackets() {
     jacketsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }
 
-// Call renderJackets at the end of the file or inside DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', () => {
     renderJackets();
 });
-
-
 
 if (categoryHeader) {
     categoryHeader.innerHTML = returnGenderString(gender);

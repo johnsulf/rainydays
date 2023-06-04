@@ -59,8 +59,8 @@ export function renderJacketCard(jacket) {
                 <p>${jacket.model}</p>
                 <p>${jacket.price} $</p>
                 <div class="jackets_cards__card__stars">
-                <p>${starsHtml}</p>
-                <p>${jacket.stars}</p>
+                    <p>${starsHtml}</p>
+                    <p>${jacket.stars}</p>
                 </div>
             </a>`;
 }
