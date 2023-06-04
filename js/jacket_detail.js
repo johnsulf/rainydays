@@ -39,9 +39,9 @@ jacketDetail.innerHTML = `<div class="jacket-detail_img-stars">
                             <h1>${j.model}</h1>
                             <p>${j.manufactor}</p>
                             <p class="jacket-detail_price">${j.price} $</p>
-                            <p class="fs-body-medium fw-bold">Pick color</p>
+                            <p class="fs-body text-primary fw-bold margin-top-50">Pick color</p>
                             <div class="jacket-detail_color">${generateColorOptions(allColors)}</div>
-                            <p class="fs-body-medium fw-bold">Choose size</p>
+                            <p class="fs-body text-primary fw-bold margin-top-50">Choose size</p>
                             <div class="jacket-detail_size">${generateSizeOptions(allSizes)}</div>
                             <button class="cta disabled margin-block-200 fs-body" id="add-to-chart">add to cart</button>
                         </div>`;

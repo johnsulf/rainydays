@@ -100,3 +100,7 @@
 .margin-block-200 {
     margin-block: var(--size-200)
 }
+
+.margin-top-50 {
+    margin-top: var(--size-50)
+}
