@@ -1,4 +1,9 @@
 export function getStars(stars) {
+    // Convert string to number if necessary
+    if (typeof stars === 'string') {
+        stars = parseFloat(stars);
+    }
+
     let fullStars = Math.floor(stars); // Full stars
     let hasHalfStar = stars % 1 >= 0.1 ? true : false; // Has half star
     let emptyStars = Math.floor(5 - stars - (hasHalfStar ? 0.1 : 0)); // Empty stars
@@ -17,6 +22,7 @@ export function getStars(stars) {
 
     return starsHtml;
 }
+
 
 export function returnGenderString(gender) {
     switch (gender) {
@@ -47,21 +53,23 @@ export function filterBySize(jackets, sizeFilters) {
 }
 
 export function filterByRating(jackets, ratingFilter) {
-    return jackets.filter(jacket => jacket.stars >= ratingFilter);
+    return jackets.filter(jacket => parseFloat(jacket.average_rating) >= ratingFilter);
 }
 
 export function renderJacketCard(jacket) {
-    let starsHtml = getStars(jacket.stars);
+    console.log(jacket.average_rating);
+    let starsHtml = getStars(jacket.average_rating);
 
-    return `<a href="/pages/jacket_detail.html?id=${jacket.id}" class="jackets_cards__card">
-                <img src="/assets/images/${jacket.img}" alt="${jacket.alt}">
-                <p>${jacket.manufactor}</p>
-                <p>${jacket.model}</p>
-                <p>${jacket.price} $</p>
+    return `<a href="${jacket.permalink}" class="jackets_cards__card">
+                <img src="${jacket.images[0].src}" alt="${jacket.short_description}">
+                <p>${jacket.name.split(" ")[0]}</p> <!-- Assuming the manufactor is the first word in name -->
+                <p>${jacket.name}</p>
+                <p>${jacket.price_html}</p>
                 <div class="jackets_cards__card__stars">
                     <p>${starsHtml}</p>
-                    <p>${jacket.stars}</p>
+                    <p>${jacket.average_rating}</p>
                 </div>
             </a>`;
 }
+
 
