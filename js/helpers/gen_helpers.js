@@ -60,9 +60,9 @@ export function renderJacketCard(jacket) {
     console.log(jacket.average_rating);
     let starsHtml = getStars(jacket.average_rating);
 
-    return `<a href="${jacket.permalink}" class="jackets_cards__card">
+    return `<a href="/pages/jacket_detail.html?id=${jacket.id}" class="jackets_cards__card">
                 <img src="${jacket.images[0].src}" alt="${jacket.short_description}">
-                <p>${jacket.name.split(" ")[0]}</p> <!-- Assuming the manufactor is the first word in name -->
+                <p>${jacket.name.split(" ")[0]}</p>
                 <p>${jacket.name}</p>
                 <p>${jacket.price_html}</p>
                 <div class="jackets_cards__card__stars">

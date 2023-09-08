@@ -1,11 +1,30 @@
-import { jackets } from "./models/jackets_list.js";
 import { getStars } from "./helpers/gen_helpers.js";
 
 let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 const id = new URLSearchParams(window.location.search).get('id');
 
+async function getSpecificJacket(id) {
+    try {
+        const response = await fetch(`https://wp.erlendjohnsen.com/wp-json/wc/store/products/${id}`);
+        const jacket = await response.json();
+        console.log("API response:", jacket);  // Debugging line
+        return jacket;
+    } catch (error) {
+        console.log("Error fetching specific jacket:", error);
+    }
+}
+
+
+let j; // Declare j here so it can be accessed in other functions
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const id = new URLSearchParams(window.location.search).get('id');
+    j = await getSpecificJacket(id); // Assign the fetched jacket to j
+    console.log("Fetched jacket:", j);
+    populateJacketDetails(); // Call a function to populate the details
+});
+
 const jacketDetail = document.querySelector(".jacket-detail");
-const j = jackets[id];
 const allColors = ["grey", "red", "orange", "blue", "pink"];
 const allSizes = ["S", "M", "L", "XL"];
 
@@ -28,23 +47,25 @@ function generateSizeOptions(sizes) {
     }).join('');
 }
 
-jacketDetail.innerHTML = `<div class="jacket-detail_img-stars">
-                            <img src="/assets/images/${j.img}" alt="${j.alt}" class="jacket-detail_img">
+function populateJacketDetails() {
+    jacketDetail.innerHTML = `<div class="jacket-detail_img-stars">
+                            <img src="/assets/images/${j.images[0].src}" alt="${j.short_descriptiont}" class="jacket-detail_img">
                             <div class="jacket-detail_stars">
-                                <p>${getStars(j.stars)}</p>
-                                <p>${j.stars}</p>
+                                <p>${getStars(j.average_rating)}</p>
+                                <p>${j.average_rating}</p>
                             </div>
                         </div>
                         <div class="jacket-detail_info">
-                            <h1>${j.model}</h1>
-                            <p>${j.manufactor}</p>
-                            <p class="jacket-detail_price">${j.price} $</p>
+                            <h1>${j.name}</h1>
+                            <p>${j.jacket.name.split(" ")[0]}</p>
+                            <p class="jacket-detail_price">${j.price_html} $</p>
                             <p class="fs-body text-primary fw-bold margin-top-50">Pick color</p>
                             <div class="jacket-detail_color">${generateColorOptions(allColors)}</div>
                             <p class="fs-body text-primary fw-bold margin-top-50">Choose size</p>
                             <div class="jacket-detail_size">${generateSizeOptions(allSizes)}</div>
                             <button class="cta disabled margin-block-200 fs-body" id="add-to-chart">add to cart</button>
                         </div>`;
+}
 
 let selectedColor, selectedSize;
 
@@ -85,6 +106,11 @@ document.querySelector('#add-to-chart').addEventListener('click', () => {
     }
 });
 
-document.querySelector("[data-close-modal]").addEventListener('click', () => {
-    document.querySelector("[data-modal]").close();
+document.addEventListener('DOMContentLoaded', () => {
+    const modalElement = document.querySelector("[data-modal]");
+    if (modalElement) {
+        modalElement.addEventListener('click', () => {
+            modalElement.close();
+        });
+    }
 });
