@@ -1,4 +1,3 @@
-// import { jackets } from "../models/jackets_list.js";
 import {
     returnGenderString,
     getCheckedOptions,
@@ -15,23 +14,29 @@ const categoryHeader = document.querySelector(".category-header");
 
 const gender = params.get('gender');
 
-export let filteredJackets = []; // gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
-let jacketsAmountParagraph = document.querySelector('.jackets_amount');
+export let filteredJackets = [];
+let jacketsAmountParagraph = document.querySelector('.jackets_amount') ?? {};
 
 let html = "";
 
 const url = "https://wp.erlendjohnsen.com/wp-json/wc/store/products";
 
 async function getJackets() {
-    jacketsContainer.innerHTML = `<p>Loading...</p>`
+    jacketsContainer.innerHTML = `<div class="loading-container">
+                                    <div class="loading-container_loader">
+                                        <p>Loading...</p>
+                                        <div class="circle1"></div>
+                                        <div class="circle2"></div>
+                                    </div>
+                                  </div>`
     try {
         const response = await fetch(url);
         const jacketsJson = await response.json();
         filteredJackets = jacketsJson;
-        renderJackets(); // Add this line here
+        renderJackets();
     } catch (error) {
         console.log(error);
-    }
+    } 
 }
 
 function getReviewFilter() {

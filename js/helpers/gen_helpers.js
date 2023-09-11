@@ -57,7 +57,6 @@ export function filterByRating(jackets, ratingFilter) {
 }
 
 export function renderJacketCard(jacket) {
-    console.log(jacket.average_rating);
     let starsHtml = getStars(jacket.average_rating);
 
     return `<a href="/pages/jacket_detail.html?id=${jacket.id}" class="jackets_cards__card">

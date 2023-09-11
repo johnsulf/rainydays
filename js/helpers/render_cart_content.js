@@ -11,15 +11,15 @@ export function renderCartContents(container) {
     let total = 0;
 
     shoppingCart.forEach((item, index) => {
-        total += parseFloat(item.price);
+        total += parseFloat(item.prices.price);
         html += `<div class="cart-item">
-                    <img class="cart-item_img" src="/assets/images/${item.img}">
+                    <img class="cart-item_img" src="${item.images[0].src}">
                     <div class="cart-item_info">
-                        <p class="cart-item_title">${item.model}</p>
-                        <p class="cart-item_subtitle">${item.manufactor} | ${item.selectedColor} | ${item.selectedSize}</p>
+                        <p class="cart-item_title">${item.name}</p>
+                        <p class="cart-item_subtitle">${item.name.split(" ")[0]} | ${item.selectedColor} | ${item.selectedSize}</p>
                     </div>
                     <div class="cart-item_info">
-                        <p class="cart-item_subtitle text-primary">${item.price} $</p>
+                        <p class="cart-item_subtitle text-primary">${item.price_html}</p>
                     </div>
                     <button class="cta cart-item_remove fs-body-small" data-index="${index}">X</button>
                 </div>
