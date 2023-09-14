@@ -5,19 +5,50 @@ let j;
 
 document.addEventListener('DOMContentLoaded', async () => {
     const id = new URLSearchParams(window.location.search).get('id');
+    jacketDetail.innerHTML = `<div class="loading-container">
+                                <div class="loading-container_loader">
+                                    <p>Loading...</p>
+                                    <div class="circle1"></div>
+                                    <div class="circle2"></div>
+                                </div>
+                            </div>`;
+
+    let dataLoaded = false;
+    let shouldPopulate = false;
+    let fetchError = false;
+
+    setTimeout(() => {
+        if (dataLoaded) {
+            populateJacketDetails();
+            addColorListener();
+            addSizeListener();
+            addAddToCartListener();
+        } else if (fetchError) {
+            jacketDetail.innerHTML = `<p>Something went wrong...</p>`;
+        } else {
+            shouldPopulate = true;
+        }
+    }, 2000);
+
     try {
         const response = await fetch(`https://wp.erlendjohnsen.com/wp-json/wc/store/products/${id}`);
-        j = await response.json();
-        console.log("Jacket:", j);  // Debugging line
+        if (response.ok) {
+            j = await response.json();
+            console.log("Jacket:", j);
+            dataLoaded = true;
+            if (shouldPopulate) {
+                populateJacketDetails();
+            }
+        } else {
+            throw new Error("Failed to fetch");
+        }
     } catch (error) {
+        fetchError = true;
+        if (shouldPopulate) {
+            jacketDetail.innerHTML = `<p>Something went wrong...</p>`;
+        }
         console.log("Error fetching specific jacket:", error);
-        return; // Exit if the fetch fails
-    } 
-    populateJacketDetails();
-    
-    addColorListener();
-    addSizeListener();
-    addAddToCartListener();
+    }
 
 });
 
@@ -90,8 +121,6 @@ function addSizeListener() {
 
 function checkSelection() {
     const cta = document.querySelector('#add-to-chart');
-    console.log(selectedColor);
-    console.log(selectedSize);
     if (selectedColor && selectedSize) {
         cta.classList.remove('disabled');
     } else {
