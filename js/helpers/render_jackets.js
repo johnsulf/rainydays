@@ -1,16 +1,19 @@
+import { toggleLoadingIndicator } from "../components/loadingIndicator.js";
+
 import {
     returnGenderString,
     getCheckedOptions,
     filterByOptions,
     filterBySize,
     filterByRating,
-    renderJacketCard
+    renderJacketCard,
 } from "./gen_helpers.js";
 
 const params = new URLSearchParams(window.location.search);
 
 const jacketsContainer = document.querySelector(".jackets_cards");
 const categoryHeader = document.querySelector(".category-header");
+const jacketsCardsLoadingContainer = document.querySelector("#cardsLoader");
 
 const gender = params.get('gender');
 
@@ -22,21 +25,18 @@ let html = "";
 const url = "https://wp.erlendjohnsen.com/wp-json/wc/store/products";
 
 async function getJackets() {
-    jacketsContainer.innerHTML = `<div class="loading-container">
-                                    <div class="loading-container_loader">
-                                        <p>Loading...</p>
-                                        <div class="circle1"></div>
-                                        <div class="circle2"></div>
-                                    </div>
-                                  </div>`
+    toggleLoadingIndicator(true, jacketsCardsLoadingContainer);
     try {
         const response = await fetch(url);
         const jacketsJson = await response.json();
         filteredJackets = jacketsJson;
         renderJackets();
+        toggleLoadingIndicator(false, jacketsCardsLoadingContainer);
     } catch (error) {
+        toggleLoadingIndicator(false, jacketsCardsLoadingContainer);
+        jacketsContainer.innerHTML = `<p style="padding-block: 8rem;">Something went wrong...</p>`;
         console.log(error);
-    } 
+    }
 }
 
 function getReviewFilter() {
@@ -84,6 +84,7 @@ function renderJackets() {
             el.addEventListener('change', renderJackets);
         });
     }
+    console.log("Jackets to render:", jacketsToRender);
 
     jacketsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }

@@ -1,60 +1,34 @@
 import { getStars } from "./helpers/gen_helpers.js";
+import { toggleLoadingIndicator } from "./components/loadingIndicator.js";
 
 let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
 let j;
 
+const jacketDetail = document.querySelector(".jacket-detail");
+const allColors = ["Grey", "Red", "Orange", "Blue", "Pink"];
+const allSizes = ["Small", "Medium", "Large", "X-Large"];
+const jacketDetailsLoadingContainer = document.querySelector("#detailsLoader");
+
 document.addEventListener('DOMContentLoaded', async () => {
     const id = new URLSearchParams(window.location.search).get('id');
-    jacketDetail.innerHTML = `<div class="loading-container">
-                                <div class="loading-container_loader">
-                                    <p>Loading...</p>
-                                    <div class="circle1"></div>
-                                    <div class="circle2"></div>
-                                </div>
-                            </div>`;
-
-    let dataLoaded = false;
-    let shouldPopulate = false;
-    let fetchError = false;
-
-    setTimeout(() => {
-        if (dataLoaded) {
-            populateJacketDetails();
-            addColorListener();
-            addSizeListener();
-            addAddToCartListener();
-        } else if (fetchError) {
-            jacketDetail.innerHTML = `<p>Something went wrong...</p>`;
-        } else {
-            shouldPopulate = true;
-        }
-    }, 2000);
+    toggleLoadingIndicator(true, jacketDetailsLoadingContainer);
 
     try {
         const response = await fetch(`https://wp.erlendjohnsen.com/wp-json/wc/store/products/${id}`);
-        if (response.ok) {
-            j = await response.json();
-            console.log("Jacket:", j);
-            dataLoaded = true;
-            if (shouldPopulate) {
-                populateJacketDetails();
-            }
-        } else {
-            throw new Error("Failed to fetch");
-        }
+        j = await response.json();
+        console.log("Jacket:", j);
+        populateJacketDetails();
+        toggleLoadingIndicator(false, jacketDetailsLoadingContainer);
+        addColorListener();
+        addSizeListener();
+        addAddToCartListener();
     } catch (error) {
-        fetchError = true;
-        if (shouldPopulate) {
-            jacketDetail.innerHTML = `<p>Something went wrong...</p>`;
-        }
+        toggleLoadingIndicator(false, jacketDetailsLoadingContainer);
+        jacketDetail.innerHTML = `<p style="padding-block: 8rem;">Something went wrong...</p>`;
         console.log("Error fetching specific jacket:", error);
     }
 
 });
-
-const jacketDetail = document.querySelector(".jacket-detail");
-const allColors = ["Grey", "Red", "Orange", "Blue", "Pink"];
-const allSizes = ["Small", "Medium", "Large", "X-Large"];
 
 function generateColorOptions(colors) {
     return colors.map(color => {
@@ -129,15 +103,15 @@ function checkSelection() {
 }
 
 function addAddToCartListener() {
-document.querySelector('#add-to-chart').addEventListener('click', () => {
-    const cta = document.querySelector('#add-to-chart');
-    if (!cta.classList.contains('disabled')) {
-        shoppingCart.push({ ...j, selectedColor, selectedSize });
-        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-        document.dispatchEvent(new CustomEvent('cart-updated'));
-        document.querySelector("[data-modal]").showModal()
-    }
-});
+    document.querySelector('#add-to-chart').addEventListener('click', () => {
+        const cta = document.querySelector('#add-to-chart');
+        if (!cta.classList.contains('disabled')) {
+            shoppingCart.push({ ...j, selectedColor, selectedSize });
+            localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+            document.dispatchEvent(new CustomEvent('cart-updated'));
+            document.querySelector("[data-modal]").showModal()
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

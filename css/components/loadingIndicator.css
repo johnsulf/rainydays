@@ -1,18 +1,26 @@
 @import url(../imports/variables.css);
 
-.loading-container, .loading-container_loader {
+.show {
     display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.loading-container,
+.loading-container_loader {
     align-items: center;
     justify-content: center;
-
 }
 
 .loading-container {
-    margin-top: 2rem;
     width: 100%;
+    padding-block: 6rem;
 }
 
 .loading-container_loader {
+    display: flex;
     height: 40px;
     width: 40px;
     border: 10px solid var(--clr-primary);
@@ -21,7 +29,8 @@
     font-size: 6px;
 }
 
-.circle1, .circle2 {
+.circle1,
+.circle2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,6 +54,7 @@
     0% {
         transform: translate(-50%, -50%) rotate(0deg) translate(0, -25px);
     }
+
     100% {
         transform: translate(-50%, -50%) rotate(360deg) translate(0, -25px);
     }

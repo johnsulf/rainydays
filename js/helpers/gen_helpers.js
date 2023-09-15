@@ -49,7 +49,13 @@ export function filterByOptions(jackets, optionType, optionList) {
 }
 
 export function filterBySize(jackets, sizeFilters) {
-    return jackets.filter(jacket => jacket.availableSizes.some(sizeObj => sizeFilters.includes(sizeObj.size)));
+    return jackets.filter(jacket => {
+        const sizeAttribute = jacket.attributes.find(attr => attr.name === "Size");
+        console.log(sizeAttribute);
+        if (!sizeAttribute) return false;
+        console.log(sizeAttribute.terms);
+        return sizeAttribute.terms.some(term => sizeFilters.includes(term.name));
+    });
 }
 
 export function filterByRating(jackets, ratingFilter) {
