@@ -1,5 +1,4 @@
 export function getStars(stars) {
-    // Convert string to number if necessary
     if (typeof stars === 'string') {
         stars = parseFloat(stars);
     }
@@ -44,17 +43,13 @@ export function getCheckedOptions(optionType) {
     return checkedOptions;
 }
 
-export function filterByOptions(jackets, optionType, optionList) {
-    return jackets.filter(jacket => optionList.some(option => jacket[optionType].includes(option)));
-}
-
-export function filterBySize(jackets, sizeFilters) {
+export function filterByColorOrSize(jackets, filters, filterName) {
     return jackets.filter(jacket => {
-        const sizeAttribute = jacket.attributes.find(attr => attr.name === "Size");
-        console.log(sizeAttribute);
-        if (!sizeAttribute) return false;
-        console.log(sizeAttribute.terms);
-        return sizeAttribute.terms.some(term => sizeFilters.includes(term.name));
+        const attribute = jacket.attributes.find(attr => attr.name === filterName);
+        console.log(attribute);
+        if (!attribute) return false;
+        console.log(attribute.terms);
+        return attribute.terms.some(term => filters.includes(term.name));
     });
 }
 

@@ -3,8 +3,7 @@ import { toggleLoadingIndicator } from "../components/loadingIndicator.js";
 import {
     returnGenderString,
     getCheckedOptions,
-    filterByOptions,
-    filterBySize,
+    filterByColorOrSize,
     filterByRating,
     renderJacketCard,
 } from "./gen_helpers.js";
@@ -14,7 +13,6 @@ const params = new URLSearchParams(window.location.search);
 const jacketsContainer = document.querySelector(".jackets_cards");
 const categoryHeader = document.querySelector(".category-header");
 const jacketsCardsLoadingContainer = document.querySelector("#cardsLoader");
-
 const gender = params.get('gender');
 
 export let filteredJackets = [];
@@ -62,11 +60,11 @@ function renderJackets() {
     let jacketsToRender = [...filteredJackets];
 
     if (colorFilters.length > 0) {
-        jacketsToRender = filterByOptions(jacketsToRender, 'color', colorFilters);
+        jacketsToRender = filterByColorOrSize(jacketsToRender, colorFilters, "Color");
     }
 
     if (sizeFilters.length > 0) {
-        jacketsToRender = filterBySize(jacketsToRender, sizeFilters);
+        jacketsToRender = filterByColorOrSize(jacketsToRender, sizeFilters, "Size");
     }
 
     jacketsToRender = filterByRating(jacketsToRender, reviewFilter);
@@ -84,8 +82,6 @@ function renderJackets() {
             el.addEventListener('change', renderJackets);
         });
     }
-    console.log("Jackets to render:", jacketsToRender);
-
     jacketsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }
 

@@ -15,27 +15,27 @@ function buildFilters() {
         </p>
         <div class="filter-options" id="color-filter-options">
             <div class="filter-options_option">
-                <input type="checkbox" id="grey" name="color" value="grey">
+                <input type="checkbox" id="grey" name="color" value="Grey">
                 <label for="grey">Grey</label>
                 <span class="filter-options_colordot bg-grey"></span>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="orange" name="color" value="orange">
+                <input type="checkbox" id="orange" name="color" value="Orange">
                 <label for="orange">Orange</label>
                 <span class="filter-options_colordot bg-orange"></span>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="red" name="color" value="red">
+                <input type="checkbox" id="red" name="color" value="Red">
                 <label for="red">Red</label>
                 <span class="filter-options_colordot bg-red"></span>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="pink" name="color" value="pink">
+                <input type="checkbox" id="pink" name="color" value="Pink">
                 <label for="pink">Pink</label>
                 <span class="filter-options_colordot bg-pink"></span>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="blue" name="color" value="blue">
+                <input type="checkbox" id="blue" name="color" value="Blue">
                 <label for="blue">Blue</label>
                 <span class="filter-options_colordot bg-blue"></span>
             </div>
@@ -49,19 +49,19 @@ function buildFilters() {
         </p>
         <div class="filter-options" id="size-filter-options">
             <div class="filter-options_option">
-                <input type="checkbox" id="S" name="size" value="S">
+                <input type="checkbox" id="S" name="size" value="Small">
                 <label for="S">Small</label>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="M" name="size" value="M">
+                <input type="checkbox" id="M" name="size" value="Medium">
                 <label for="M">Medium</label>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="L" name="size" value="L">
+                <input type="checkbox" id="L" name="size" value="Large">
                 <label for="L">Large</label>
             </div>
             <div class="filter-options_option">
-                <input type="checkbox" id="XL" name="size" value="XL">
+                <input type="checkbox" id="XL" name="size" value="XLarge">
                 <label for="XL">X-Large</label>
             </div>
         </div>

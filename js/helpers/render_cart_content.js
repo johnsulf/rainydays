@@ -11,7 +11,8 @@ export function renderCartContents(container) {
     let total = 0;
 
     shoppingCart.forEach((item, index) => {
-        total += parseFloat(item.prices.price);
+        const itemPrice = parseFloat(item.prices.price) / Math.pow(10, item.prices.currency_minor_unit);
+        total += itemPrice;
         html += `<div class="cart-item">
                     <img class="cart-item_img" src="${item.images[0].src}">
                     <div class="cart-item_info">
@@ -19,7 +20,7 @@ export function renderCartContents(container) {
                         <p class="cart-item_subtitle">${item.name.split(" ")[0]} | ${item.selectedColor} | ${item.selectedSize}</p>
                     </div>
                     <div class="cart-item_info">
-                        <p class="cart-item_subtitle text-primary">${item.price_html}</p>
+                        <p class="cart-item_subtitle text-primary">${item.prices.currency_prefix}${itemPrice}${item.prices.currency_suffix}</p>
                     </div>
                     <button class="cta cart-item_remove fs-body-small" data-index="${index}">X</button>
                 </div>
@@ -27,7 +28,7 @@ export function renderCartContents(container) {
     });
 
     html += `<div class="cart-total fw-bold">
-                <p>Total: ${total.toFixed(2)} $</p>
+                <p>Total: ${total.toFixed(2)} ${shoppingCart[0].prices.currency_symbol}</p> <!-- Rounded to 2 decimal places -->
             </div>`;
 
     if (shoppingCart.length !== 0 && !document.getElementById('checkout-page')) {
@@ -45,6 +46,7 @@ export function renderCartContents(container) {
         button.addEventListener('click', (event) => removeCartItem(event, containerSelector));
     });
 }
+
 
 
 function removeCartItem(event, containerSelector) {
