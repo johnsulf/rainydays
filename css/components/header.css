@@ -34,6 +34,7 @@ header {
     gap: var(--size-50);
     cursor: pointer;
     color: var(--clr-primary);
+    position: relative;
 }
 
 .menu-close {
@@ -55,7 +56,9 @@ header {
 .search,
 .cart {
     position: absolute;
-    right: var(--size-50);
+    width: 90vw;
+    max-width: 400px;
+    right: 0;
     top: 4rem;
     display: none;
     z-index: 5;
@@ -63,11 +66,14 @@ header {
 
 .search input {
     height: 2rem;
-    width: 20rem;
+    width: 100%;
     border-radius: var(--radius-default);
     border: 1px solid var(--clr-primary);
     margin-top: 2px;
-    padding-inline: var(--size-100);
+}
+
+.search input {
+    text-indent: 1rem;
 }
 
 .search.show,
@@ -82,7 +88,7 @@ header {
     gap: var(--size-50);
     align-items: center;
     height: var(--size-300);
-    width: 20rem;
+    width: 100%;
 }
 
 .cart-item {

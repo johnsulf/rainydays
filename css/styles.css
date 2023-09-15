@@ -1,6 +1,7 @@
 @import url(imports/constants.css);
 @import url(imports/variables.css);
 @import url(components/header.css);
+@import url(components/loadingIndicator.css);
 
 * {
     margin: 0;

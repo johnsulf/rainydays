@@ -1,24 +1,41 @@
-import { jackets } from "../models/jackets_list.js";
+import { toggleLoadingIndicator } from "../components/loadingIndicator.js";
+
 import {
     returnGenderString,
     getCheckedOptions,
-    filterByOptions,
-    filterBySize,
+    filterByColorOrSize,
     filterByRating,
-    renderJacketCard
+    renderJacketCard,
 } from "./gen_helpers.js";
 
 const params = new URLSearchParams(window.location.search);
 
 const jacketsContainer = document.querySelector(".jackets_cards");
 const categoryHeader = document.querySelector(".category-header");
-
+const jacketsCardsLoadingContainer = document.querySelector("#cardsLoader");
 const gender = params.get('gender');
 
-let filteredJackets = gender ? jackets.filter(j => j.gender.includes(gender) || j.gender.includes("unisex")) : jackets;
-let jacketsAmountParagraph = document.querySelector('.jackets_amount');
+export let filteredJackets = [];
+let jacketsAmountParagraph = document.querySelector('.jackets_amount') ?? {};
 
 let html = "";
+
+const url = "https://wp.erlendjohnsen.com/wp-json/wc/store/products";
+
+async function getJackets() {
+    toggleLoadingIndicator(true, jacketsCardsLoadingContainer);
+    try {
+        const response = await fetch(url);
+        const jacketsJson = await response.json();
+        filteredJackets = jacketsJson;
+        renderJackets();
+        toggleLoadingIndicator(false, jacketsCardsLoadingContainer);
+    } catch (error) {
+        toggleLoadingIndicator(false, jacketsCardsLoadingContainer);
+        jacketsContainer.innerHTML = `<p style="padding-block: 8rem;">Something went wrong...</p>`;
+        console.log(error);
+    }
+}
 
 function getReviewFilter() {
     const reviewFilters = document.getElementsByName('reviews');
@@ -43,11 +60,11 @@ function renderJackets() {
     let jacketsToRender = [...filteredJackets];
 
     if (colorFilters.length > 0) {
-        jacketsToRender = filterByOptions(jacketsToRender, 'color', colorFilters);
+        jacketsToRender = filterByColorOrSize(jacketsToRender, colorFilters, "Color");
     }
 
     if (sizeFilters.length > 0) {
-        jacketsToRender = filterBySize(jacketsToRender, sizeFilters);
+        jacketsToRender = filterByColorOrSize(jacketsToRender, sizeFilters, "Size");
     }
 
     jacketsToRender = filterByRating(jacketsToRender, reviewFilter);
@@ -65,12 +82,11 @@ function renderJackets() {
             el.addEventListener('change', renderJackets);
         });
     }
-
     jacketsAmountParagraph.innerHTML = `Showing <span class="text-secondary fw-bold">${jacketsToRender.length}</span> jackets`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderJackets();
+    getJackets();
 });
 
 if (categoryHeader) {

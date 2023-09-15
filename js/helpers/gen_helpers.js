@@ -1,4 +1,8 @@
 export function getStars(stars) {
+    if (typeof stars === 'string') {
+        stars = parseFloat(stars);
+    }
+
     let fullStars = Math.floor(stars); // Full stars
     let hasHalfStar = stars % 1 >= 0.1 ? true : false; // Has half star
     let emptyStars = Math.floor(5 - stars - (hasHalfStar ? 0.1 : 0)); // Empty stars
@@ -17,6 +21,7 @@ export function getStars(stars) {
 
     return starsHtml;
 }
+
 
 export function returnGenderString(gender) {
     switch (gender) {
@@ -38,30 +43,33 @@ export function getCheckedOptions(optionType) {
     return checkedOptions;
 }
 
-export function filterByOptions(jackets, optionType, optionList) {
-    return jackets.filter(jacket => optionList.some(option => jacket[optionType].includes(option)));
-}
-
-export function filterBySize(jackets, sizeFilters) {
-    return jackets.filter(jacket => jacket.availableSizes.some(sizeObj => sizeFilters.includes(sizeObj.size)));
+export function filterByColorOrSize(jackets, filters, filterName) {
+    return jackets.filter(jacket => {
+        const attribute = jacket.attributes.find(attr => attr.name === filterName);
+        console.log(attribute);
+        if (!attribute) return false;
+        console.log(attribute.terms);
+        return attribute.terms.some(term => filters.includes(term.name));
+    });
 }
 
 export function filterByRating(jackets, ratingFilter) {
-    return jackets.filter(jacket => jacket.stars >= ratingFilter);
+    return jackets.filter(jacket => parseFloat(jacket.average_rating) >= ratingFilter);
 }
 
 export function renderJacketCard(jacket) {
-    let starsHtml = getStars(jacket.stars);
+    let starsHtml = getStars(jacket.average_rating);
 
     return `<a href="/pages/jacket_detail.html?id=${jacket.id}" class="jackets_cards__card">
-                <img src="/assets/images/${jacket.img}" alt="${jacket.alt}">
-                <p>${jacket.manufactor}</p>
-                <p>${jacket.model}</p>
-                <p>${jacket.price} $</p>
+                <img src="${jacket.images[0].src}" alt="${jacket.short_description}">
+                <p>${jacket.name.split(" ")[0]}</p>
+                <p>${jacket.name}</p>
+                <p>${jacket.price_html}</p>
                 <div class="jackets_cards__card__stars">
                     <p>${starsHtml}</p>
-                    <p>${jacket.stars}</p>
+                    <p>${jacket.average_rating}</p>
                 </div>
             </a>`;
 }
+
 
