@@ -59,6 +59,12 @@ function renderJackets() {
 
     let jacketsToRender = [...filteredJackets];
 
+    if (gender === 'male') {
+        jacketsToRender = jacketsToRender.filter(jacket => jacket.categories.some(category => category.name === 'Male'));
+    } else if (gender === 'female') {
+        jacketsToRender = jacketsToRender.filter(jacket => jacket.categories.some(category => category.name === 'Female'));
+    }
+
     if (colorFilters.length > 0) {
         jacketsToRender = filterByColorOrSize(jacketsToRender, colorFilters, "Color");
     }

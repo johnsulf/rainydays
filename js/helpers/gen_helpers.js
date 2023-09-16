@@ -22,7 +22,6 @@ export function getStars(stars) {
     return starsHtml;
 }
 
-
 export function returnGenderString(gender) {
     switch (gender) {
         case 'male':
