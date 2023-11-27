@@ -8,8 +8,6 @@ A simple overview of the use/purpose of the project.
 
 The Rainydays site has been with me all the way from the start. A prototype in Figma was first made in the Design course. Then, in the HTML & CSS course, the site was brought to the web as a static web page. In the Interaction Design Course, improvements where made to the page, and some JavaScript were added. And finally, in the Content Management Systems Course, the page was linked up with Wordpress as a headless CMS for hosting products.
 
-You can add some bullet points if you'd like to:
-
 ## Built With
 
 No frameworks are used in this project.
