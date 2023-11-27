@@ -1,4 +1,4 @@
-# Your project title
+# Rainydays - Cross Course Project
 
 ![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
@@ -6,37 +6,23 @@ A simple overview of the use/purpose of the project.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+The Rainydays site has been with me all the way from the start. A prototype in Figma was first made in the Design course. Then, in the HTML & CSS course, the site was brought to the web as a static web page. In the Interaction Design Course, improvements where made to the page, and some JavaScript were added. And finally, in the Content Management Systems Course, the page was linked up with Wordpress as a headless CMS for hosting products.
 
 You can add some bullet points if you'd like to:
 
-- List item 1
-- List item 2
-- List item 3
-
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+No frameworks are used in this project.
+- HTML, CSS and JavaScript
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
-
+Open a command window and navigate to destination you want to save the project to. Then run:
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
+git clone https://github.com/johnsulf/rainydays.git
 ```
 
 ### Running
