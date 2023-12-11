@@ -10,7 +10,10 @@ The Rainydays site has been built as a result of several subjects in my studies 
 
 ### Key features
 
-- 
+- Popular products: A popular products section is featured on the home page.
+- Filtering products: Jackets can be filtered based on Color, Size and Review
+- Search: The header provides search functionality
+- Shopping cart: The shopping cart uses local storage to store products added to the cart
 
 ## Built With
 
