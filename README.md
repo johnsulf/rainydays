@@ -6,7 +6,7 @@ A simple overview of the use/purpose of the project.
 
 ## Description
 
-The Rainydays site has been built as a result of several subjects in my studies at Noroff. A prototype in Figma was first made in the Design course. Then, the HTML & CSS course brought the site to the web as a static web page. In the Interaction Design Course, improvements were made to the page, and some JavaScript was added. And finally, in the Content Management Systems Course, the page was linked up with WordPress through the REST API as a headless CMS for hosting products. Visit the site [here](https://raindydaysej.netlify.app/)
+The Rainydays site has been built due to several subjects in my studies at Noroff. A prototype in Figma was first made in the Design course. Then, the HTML & CSS course brought the site to the web as a static web page. In the Interaction Design Course, improvements were made to the page, and some JavaScript was added. And finally, in the Content Management Systems Course, the page was linked up with WordPress through the REST API as a headless CMS for hosting products. Visit the site [here](https://raindydaysej.netlify.app/)
 
 ### Key features
 
@@ -14,6 +14,7 @@ The Rainydays site has been built as a result of several subjects in my studies 
 - Filtering products: Jackets can be filtered based on Color, Size and Review
 - Search: The header provides search functionality
 - Shopping cart: The shopping cart uses local storage to store products added to the cart
+- - Mobile-first design: The website is built with the mobile-first principle, but will off course look good on desktop/bigger screens as well.
 
 ## Built With
 
